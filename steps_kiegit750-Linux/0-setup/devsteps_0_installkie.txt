@@ -1,0 +1,51 @@
+Site And Resources
+---------------------------------------------------------
+https://docs.jboss.org/jbpm/release/7.5.0.Final/jbpm-docs/html_single/
+http://downloads.jboss.org/jbpm/release/7.5.0.Final/jbpm-installer-full-7.5.0.Final.zip	
+
+
+Source Code For Eclipse Plug-in
+-----------------------------------
+http://downloads.jboss.org/jbpm/release/7.5.0.Final/updatesite/
+
+
+Download KIE jbpm-installer-full-7.5.0.Final.zip
+-----------------------------------------------------
+Unzip to /mnt/FBIN/jbpm-installer-full-7.5.0.Final
+
+
+Install KIE Artifacts Using j_install.cmd
+--------------------------------------------
+cd /mnt/FBIN/jbpm-installer-full-7.5.0.Final
+./j_install.sh
+
+o Here is j_install.sh script:
+#!/bin/sh
+
+CMD="ant install.demo.noeclipse"
+echo CMD=$CMD
+
+$CMD
+
+
+
+Add Default Users - use setuser.cmd
+-----------------------------------------------
+cd /mnt/FBIN/jbpm-installer-full-7.5.0.Final
+setupuser
+
+o Make sure to set  execution permission to *.sh scripts
+cd /mnt/FBIN/jbpm-installer-full-7.5.0.Final/wildfly-10.1.0.Final/bin
+chmod +x *.sh
+
+o Here is script for setupuser:
+#!/bin/sh
+
+WILDFILY_HOME=/mnt/FBIN/jbpm-installer-full-7.5.0.Final/wildfly-10.1.0.Final/
+echo .
+echo WILDFILY_HOME=$WILDFILY_HOME
+echo .
+
+$WILDFILY_HOME/bin/add-user.sh --user-properties $WILDFILY_HOME/standalone/configuration/users.properties  --group-properties $WILDFILY_HOME/standalone/configuration/roles.properties  --realm ApplicationRealm admin admin --silent
+
+

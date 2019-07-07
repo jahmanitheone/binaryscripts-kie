@@ -1,0 +1,60 @@
+NYSOH Repository
+---------------------------------------------------------------
+o Current Repository Location For Workflow
+ssh://nyxsvlalb015/opt/was/git/NYSOHRulesRepository/.git
+
+- You have to get access from adminsitrator: Kalayan Venkata
+
+
+o My Sandbos Workfow On NYSOH
+http://nyxsvlalb344/pchauvet/csra-work-flow-test.git
+
+
+Create Your GIT Sandox
+---------------------------------------------------------------
+o I create a sandbox from c:\A-GIT, or create your own sandbox
+C:\A-GIT\GITSANDBOX_TEMP\20180119a
+
+
+Clone Workflow To Local Sandbox
+----------------------------------------------------------------
+git clone ssh://nyxsvlalb015/opt/was/git/NYSOHRulesRepository/.git
+- Provide your local computer password
+
+If you dont' have access to real Workflow, you can play around with my workspace
+git clone http://nyxsvlalb344/pchauvet/csra-work-flow-test.git
+- Provide you local computer user id and password
+
+o Create cloned git repo, you see a directory: csra-work-flow-test
+In it:
+csra-work-flow-test/
+README.md
+hooks
+hx-eligibility-dto
+hx-eligibility-parent
+hx-eligibility-readmes
+hx-eligibility-testbase
+hx-eligibility-workflows
+hx-eligibility-workflows-rest
+hx-eligibility-workflows-resttest
+hx-eligibility-workflows-test
+pom.xml
+
+- View if git repo
+cd csra-work-flow-test
+- See where are with git
+git status
+
+You should see:
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working tree clean
+
+- View .git directory.
+ls -a
+
+You should see a .git directory
+
+Annneeed, we are good with GIT and cloning our Workflow
+
+

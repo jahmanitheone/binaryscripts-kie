@@ -1,0 +1,546 @@
+Accessing eligibility services using the SoapUi Tool
+
+==============================================
+Create Project In SOAPUI
+==============================================
+o File -> New Rest Project
+Enter URL: http://localhost:9080/kie-server/services/rest/server/containers/hx-eligibility-workflows_1.0.2/
+Ok
+
+o Config Request Param: 
+Endpoint: http://localhost:9080/
+User id/password. Mine is pchauvet/pchauvet 
+ Id is from KIE Workbench setup
+domain: kieserver
+Authorization: No Authorization
+
+o Request 1
+Header: 
+Content-Type: application/json
+
+
+==============================================
+See OPTIONS
+==============================================
+http://localhost:9080/kie-server/services/rest/server/containers/hx-eligibility-workflows_1.0.2
+METHOD: OPTIONS
+HEAD, DELETE, GET, OPTIONS, PUT
+
+
+==============================================
+Get Containers
+==============================================
+http://localhost:9080/kie-server/services/rest/server/containers/hx-eligibility-workflows_1.0.2
+METHOD: GET
+Response:
+{
+"type": "SUCCESS",
+"msg": "Info for container hx-eligibility-workflows_1.0.2",
+"result": {"kie-container":    {
+  "container-id": "hx-eligibility-workflows_1.0.2",
+  "release-id":       {
+	 "group-id": "com.csra.eligibility",
+	 "artifact-id": "hx-eligibility-workflows",
+	 "version": "1.0.2"
+  },
+  "resolved-release-id":       {
+	 "group-id": "com.csra.eligibility",
+	 "artifact-id": "hx-eligibility-workflows",
+	 "version": "1.0.2"
+  },
+  "status": "STARTED",
+  "scanner":       {
+	 "status": "DISPOSED",
+	 "poll-interval": null
+  },
+  "config-items": [],
+  "messages": [      {
+	 "severity": "INFO",
+	 "timestamp": 1507049118650,
+	 "content": ["Container hx-eligibility-workflows_1.0.2 successfully created with module com.csra.eligibility:hx-eligibility-workflows:1.0.2."]
+  }],
+  "container-alias": "hx-eligibility-workflows"
+}}
+}	
+
+
+==============================================
+Get Processes
+==============================================
+http://localhost:9080/kie-server/services/rest/server/containers/hx-eligibility-workflows_1.0.2/processes
+/kie-server/services/rest/server/containers/hx-eligibility-workflows_1.0.2/processes
+{"processes": [
+  {
+  "associatedEntities": null,
+  "serviceTasks": null,
+  "processVariables": null,
+  "reusableSubProcesses": null,
+  "process-id": "MI_AidCategory",
+  "process-name": "MI_AidCategory",
+  "process-version": "1.0",
+  "package": "com.csra.eligibility.workflow.medicalincome",
+  "container-id": "hx-eligibility-workflows_1.0.2",
+  "dynamic": false
+},
+  {
+  "associatedEntities": null,
+  "serviceTasks": null,
+  "processVariables": null,
+  "reusableSubProcesses": null,
+  "process-id": "MI_CoverageCode",
+  "process-name": "MI_CoverageCode",
+  "process-version": "1.0",
+  "package": "com.csra.eligibility.workflow.medicalincome",
+  "container-id": "hx-eligibility-workflows_1.0.2",
+  "dynamic": false
+},
+  {
+  "associatedEntities": null,
+  "serviceTasks": null,
+  "processVariables": null,
+  "reusableSubProcesses": null,
+  "process-id": "MI_FPL_Level_Determination",
+  "process-name": "MI_FPL_Level_Determination",
+  "process-version": "1.0",
+  "package": "com.csra.eligibility.workflow.medicalincome",
+  "container-id": "hx-eligibility-workflows_1.0.2",
+  "dynamic": false
+},
+  {
+  "associatedEntities": null,
+  "serviceTasks": null,
+  "processVariables": null,
+  "reusableSubProcesses": null,
+  "process-id": "MI_Incometype_Determination",
+  "process-name": "MI_Incometype_Determination",
+  "process-version": "1.0",
+  "package": "com.csra.eligibility.workflow.medicalincome",
+  "container-id": "hx-eligibility-workflows_1.0.2",
+  "dynamic": false
+},
+  {
+  "associatedEntities": null,
+  "serviceTasks": null,
+  "processVariables": null,
+  "reusableSubProcesses": null,
+  "process-id": "MI_Ineligible_Prechecks",
+  "process-name": "MI_Ineligible_Prechecks",
+  "process-version": "1.0",
+  "package": "com.csra.eligibility.workflow.medicalincome",
+  "container-id": "hx-eligibility-workflows_1.0.2",
+  "dynamic": false
+},
+  {
+  "associatedEntities": null,
+  "serviceTasks": null,
+  "processVariables": null,
+  "reusableSubProcesses": null,
+  "process-id": "MI_Main",
+  "process-name": "MI_Main",
+  "process-version": "1.0",
+  "package": "com.csra.eligibility.process.medicaidincome",
+  "container-id": "hx-eligibility-workflows_1.0.2",
+  "dynamic": false
+},
+  {
+  "associatedEntities": null,
+  "serviceTasks": null,
+  "processVariables": null,
+  "reusableSubProcesses": null,
+  "process-id": "MI_Renewals",
+  "process-name": "MI_Renewals",
+  "process-version": "1.0",
+  "package": "com.csra.eligibility.workflow.medicalincome",
+  "container-id": "hx-eligibility-workflows_1.0.2",
+  "dynamic": false
+},
+  {
+  "associatedEntities": null,
+  "serviceTasks": null,
+  "processVariables": null,
+  "reusableSubProcesses": null,
+  "process-id": "MI_Resonable_Compatibility",
+  "process-name": "MI_Resonable_Compatibility",
+  "process-version": "1.0",
+  "package": "com.csra.eligibility.workflow.medicalincome",
+  "container-id": "hx-eligibility-workflows_1.0.2",
+  "dynamic": false
+}
+]}
+
+
+==============================================
+Get A Processes - MI_Main
+==============================================
+http://localhost:9080/kie-server/services/rest/server/containers/hx-eligibility-workflows_1.0.2/processes/definitions/MI_Main/
+
+{
+"associatedEntities": {},
+"serviceTasks": {},
+"processVariables":    {
+  "reasons": "String",
+  "eligibilityResult": "com.csra.eligibility.domain.eligibility.EligibilityResult",
+  "WFUtil": "com.csra.eligibility.workflow.util.WorkFlowUtil",
+  "memberFacts": "com.csra.eligibility.domain.entity.member.MemberFacts",
+  "indicators": "String"
+},
+"reusableSubProcesses":    [
+  "MI_Ineligible_Prechecks",
+  "MI_Incometype_Determination",
+  "MI_CoverageCode",
+  "MI_FPL_Level_Determination",
+  "MI_Resonable_Compatibility",
+  "MI_AidCategory"
+],
+"process-id": "MI_Main",
+"process-name": "MI_Main",
+"process-version": "1.0",
+"package": "com.csra.eligibility.process.medicaidincome",
+"container-id": "hx-eligibility-workflows_1.0.2",
+"dynamic": false
+}
+
+
+==============================================
+Get A Processes - MI_Main - variables
+==============================================
+http://localhost:9080/kie-server/services/rest/server/containers/hx-eligibility-workflows_1.0.2/processes/definitions/MI_Main/variables
+/kie-server/services/rest/server/containers/hx-eligibility-workflows_1.0.2/processes/definitions/MI_Main/variables
+
+
+/kie-server/services/rest/server/containers/hx-eligibility-workflows_1.0.2/processes/definitions/MI_Main/variables
+{"variables": {
+"reasons": "String",
+"eligibilityResult": "com.csra.eligibility.domain.eligibility.EligibilityResult",
+"WFUtil": "com.csra.eligibility.workflow.util.WorkFlowUtil",
+"memberFacts": "com.csra.eligibility.domain.entity.member.MemberFacts",
+"indicators": "String"
+}}
+
+==============================================
+Get A Processes - MI_Main - subprocesses/
+==============================================
+http://localhost:9080/kie-server/services/rest/server/containers/hx-eligibility-workflows_1.0.2/processes/definitions/MI_Main/subprocesses/
+/kie-server/services/rest/server/containers/hx-eligibility-workflows_1.0.2/processes/definitions/MI_Main/subprocesses/
+
+{"subProcesses": [
+"MI_Ineligible_Prechecks",
+"MI_Incometype_Determination",
+"MI_CoverageCode",
+"MI_FPL_Level_Determination",
+"MI_Resonable_Compatibility",
+"MI_AidCategory"
+]}
+
+==============================================
+Start Task: MI_Main
+==============================================
+Authorization: Basic, use your KIE server user id/password. Mine is pchauvet/pchauvet
+METHOD: POST
+Url: http://localhost:9080/kie-server/services/rest/server/containers/hx-eligibility-workflows_1.0.2/processes/MI_Main/instances/
+Reqiest Headers: 
+	Content-Type: application/json
+Body: 
+	raw, Not text/plain, but JSON(application/json) from drop down
+	--------------------------------------------------
+	Media Type REST Service Test Scenarios Inputs:
+	--------------------------------------------------
+	o Stale
+{
+	"memberFacts": 
+	{
+		"com.csra.eligibility.domain.entity.member.MemberFacts": {
+			"stale": "true",
+			"houseHoldIncome": "55000",
+			"age": "55"
+		}
+	}
+}		
+
+{
+	"memberFacts":
+	{
+		"com.csra.eligibility.domain.entity.member.MemberFacts":
+        {
+			"stale":true,"requestingFinanceHelp":false,"newbornNoShow":false,"renewalPeriodPast":false,
+			"epAptcClockExpired":false,"fpl":0.0,"maFplLevelforThisMember":0.0,"irsFPL":0.0,"lif":0.0,
+			"lifIndicator":false,"lifDate":null,"parentCareTaker":false,"careTakerRelative":false,
+			"enrolledInMedcaidMEC":false,"allMECInfoEntered":false,"proposedRun":false,
+			"proposedEligibility":false,"lsc":false,"lscInLastThreeMonths":false,
+			"standardIncomeInPrevElg":false,"dtfIncomeInPrevElg":false,"irsIncomeInPrevElg":false,
+			"noIncomeInPrevElg":false,"pregnant":false,"residualPrucolY":false,"maDeemedNB":false,
+			"incomeVerifeid":false,"compitableIncomeSourcesAvailable":false,"incomeOnlyFromUIB":false,
+			"incomeReasonblyCompitable":false,"incomeReasonblyCompitable10":false,"dtfIncomeAtMALevel":false,
+			"zeroHHIncome":false,"currentMonthIncomeToBeUsed":false,"incomeVerificationNoticeSent":false,
+			"incomeClockExpired":false,"incomeClockCode41":false,"currentIncomeVerificationNoticeSent":false,
+			"currentIncomeClockExpired":false,"ffsOnlyIndicator":false,"undoc":false,"hxRestrictedY":false,
+			"incomeClockSheduled":false,"medicaidIncomeClockSheduled":false,"medicaidAliessaInd":false,
+			"hasChildDependent":false,"parent":false,"livingWithParentOrCaretaker":false,"currentlyInMedicaid":false,
+			"renewalDueUpcomingMonth":false,"ineligible":false,"eligible":false,"pending":false,"firstName":null,
+			"lastName":null,"fullName":"null null","dob":null,"age":0,"incomeType":null,"houseHoldIncome":0.0,
+			"previousStandard":false,"previousDataSource":false,"previousNoIncome":false,"incomeVerificationComplete":false,
+			"useCurrentIncome":false,"nonCompilanceIndator":false,"reasonsAsString":"","indicatorsAsString":"",
+			"dsincomeAtMALevel":false
+		}
+	}
+}
+	
+	[submit]
+
+	Response: 
+		Return task id: 425, 
+		View task on KIE: Process Management->Process Instance->Completed->424
+		Click Row->Select Options->process Model
+			
+	o Not Request Financial Assistance
+	{
+		"memberFacts": 
+		{
+			"com.csra.eligibility.domain.entity.member.MemberFacts": {
+				"houseHoldIncome": "55000",
+				"age": "55"
+			}
+		}
+	}		
+	[submit]
+
+	Response: 
+		Return task id: 425, 426
+			Note 425 is MI_Main and subprocess is: MI_Ineligible_Prechecks
+		View task on KIE: Process Management->Process Instance->Completed->425
+		Click Row->Select Options->process Model, MI_Main process flow is greyed
+		Click  MI_Ineligible_Prechecks to see what was processed
+
+	o Eligible
+	{
+		"memberFacts": 
+		{
+			"com.csra.eligibility.domain.entity.member.MemberFacts": {
+				"houseHoldIncome":"15000",
+				"age":"18",
+				"lif":" 25000",
+				"pregnant":"true",
+				"requestingFinanceHelp":"true",
+				"proposedEligibility":"true",
+				"incomeVerificationComplete":"true",
+				"compitableIncomeSourcesAvailable":"true",
+				"useCurrentIncome":"true",
+				"currentIncomeVerificationNoticeSent":"true"
+			}
+		}
+	}		
+	[submit]
+
+	Response: 
+		Return task id: 427, 426, 428, 429, 430, 431, 432
+			Note 427 is MI_Main and series of subprocess 
+		View task on KIE: Process Management->Process Instance->Completed->427
+		Click Row->Select Options->process Model and subprocess
+
+	o Pending
+	{
+		"memberFacts": 
+		{
+			"com.csra.eligibility.domain.entity.member.MemberFacts": {
+				"houseHoldIncome":"15000",
+				"age":"18",
+				"lif":" 25000",
+				"requestingFinanceHelp":"true",
+				"proposedEligibility":"true",
+				"incomeVerificationComplete":"true",
+				"compitableIncomeSourcesAvailable":"true",
+				"useCurrentIncome":"true",
+				"currentIncomeVerificationNoticeSent":"true"
+			}
+		}
+	}		
+	[submit]
+
+	Response: 
+		Return task id: 433, 434
+			Note 433 is MI_Main and series of subprocess 
+		View task on KIE: Process Management->Process Instance->Completed->433
+		Click Row->Select Options->process Model and subprocess
+
+	o Ineligible
+{
+	"memberFacts": 
+	{
+		"com.csra.eligibility.domain.entity.member.MemberFacts": {
+			"houseHoldIncome":"15000",
+			"age":"18",
+			"lif":" 25000",
+			"requestingFinanceHelp":"true",
+			"proposedEligibility":"true",
+			"incomeVerificationComplete":"true",
+			"compitableIncomeSourcesAvailable":"true",
+			"currentIncomeVerificationNoticeSent":"true"
+		}
+	}
+}		
+	[submit]
+
+	Response: 
+		Return task id: 444, 445, 446, 447, 448
+			Note 444 is MI_Main and series of subprocess 
+		View task on KIE: Process Management->Process Instance->Completed->444
+		Click Row->Select Options->process Model and subprocess
+
+
+==============================================
+Process Queries
+==============================================
+http://localhost:9080/kie-server/services/rest/server/queries/processes/instances/
+
+	/kie-server/services/rest/server/queries/processes/instances/
+	{"process-instance": []}
+
+/kie-server/services/rest/server/queries/processes/instances/444/
+{
+   "process-instance-id": 444,
+   "process-id": "MI_Main",
+   "process-name": "MI_Main",
+   "process-version": "1.0",
+   "process-instance-state": 2,
+   "container-id": "hx-eligibility-workflows_1.0.2",
+   "initiator": "pchauvet",
+   "start-date": 1507052350715,
+   "process-instance-desc": "MI_Main",
+   "correlation-key": "444",
+   "parent-instance-id": -1,
+   "active-user-tasks": null,
+   "process-instance-variables": null
+}
+
+
+==============================================
+Instance Variables
+==============================================
+Url: http://localhost:9080/kie-server/services/rest/server/containers/hx-eligibility-workflows_1.0.2/processes/instances/444/
+{
+   "process-instance-id": 444,
+   "process-id": "MI_Main",
+   "process-name": "MI_Main",
+   "process-version": "1.0",
+   "process-instance-state": 2,
+   "container-id": "hx-eligibility-workflows_1.0.2",
+   "initiator": "pchauvet",
+   "start-date": 1507052350715,
+   "process-instance-desc": "MI_Main",
+   "correlation-key": "444",
+   "parent-instance-id": -1,
+   "active-user-tasks": null,
+   "process-instance-variables": null
+}
+
+
+=======================================================
+Gettting Completed Instance Variables
+=======================================================
+Url: http://localhost:9080/kie-server/services/rest/server/queries/processes/instances/444/variables/instances
+{"variable-instance": [
+      {
+      "name": "initiator",
+      "old-value": "",
+      "value": "pchauvet",
+      "process-instance-id": 444,
+      "modification-date": 1507052350716
+   },
+      {
+      "name": "memberFacts",
+      "old-value": "MemberFacts [stale=false, requestingFinanceHelp=true, newbornNoShow=false, renewalPeriodPast=false, epAptcClockExpired=false, fpl=0.0, maFplLevelforThisMember=0.0, irsFPL=0.0, lif=25000.0, parentCareTaker=false, careTakerRelative=false, enrolledInMedcaidM",
+      "value": "MemberFacts [stale=false, requestingFinanceHelp=true, newbornNoShow=false, renewalPeriodPast=false, epAptcClockExpired=false, fpl=0.0, maFplLevelforThisMember=0.0, irsFPL=0.0, lif=25000.0, parentCareTaker=false, careTakerRelative=false, enrolledInMedcaidM",
+      "process-instance-id": 444,
+      "modification-date": 1507052350932
+   },
+      {
+      "name": "eligibilityResult",
+      "old-value": "",
+      "value": "EligbilityResult [Indicators=1. INELIGIBLE:true, reasons=1:FPLLEVEL-154, 2:3, 3:3-SCH_VERIFICATION_NOTICE]",
+      "process-instance-id": 444,
+      "modification-date": 1507052350933
+   }
+]}
+
+
+=======================================================
+Gettting A ompleted Instance Variables: memberFacts
+=======================================================
+http://localhost:9080/kie-server/services/rest/server/queries/processes/instances/444/variables/instances/memberFacts
+Url: http://localhost:9080/kie-server/services/rest/server/queries/processes/instances/444/variables/instances/memberFacts
+{"variable-instance": [
+      {
+      "name": "memberFacts",
+      "old-value": "MemberFacts [stale=false, requestingFinanceHelp=true, newbornNoShow=false, renewalPeriodPast=false, epAptcClockExpired=false, fpl=0.0, maFplLevelforThisMember=0.0, irsFPL=0.0, lif=25000.0, parentCareTaker=false, careTakerRelative=false, enrolledInMedcaidM",
+      "value": "MemberFacts [stale=false, requestingFinanceHelp=true, newbornNoShow=false, renewalPeriodPast=false, epAptcClockExpired=false, fpl=0.0, maFplLevelforThisMember=0.0, irsFPL=0.0, lif=25000.0, parentCareTaker=false, careTakerRelative=false, enrolledInMedcaidM",
+      "process-instance-id": 444,
+      "modification-date": 1507052350932
+   },
+      {
+      "name": "memberFacts",
+      "old-value": "MemberFacts [stale=false, requestingFinanceHelp=true, newbornNoShow=false, renewalPeriodPast=false, epAptcClockExpired=false, fpl=0.0, maFplLevelforThisMember=0.0, irsFPL=0.0, lif=25000.0, parentCareTaker=false, careTakerRelative=false, enrolledInMedcaidM",
+      "value": "MemberFacts [stale=false, requestingFinanceHelp=true, newbornNoShow=false, renewalPeriodPast=false, epAptcClockExpired=false, fpl=0.0, maFplLevelforThisMember=0.0, irsFPL=0.0, lif=25000.0, parentCareTaker=false, careTakerRelative=false, enrolledInMedcaidM",
+      "process-instance-id": 444,
+      "modification-date": 1507052350924
+   },
+      {
+      "name": "memberFacts",
+      "old-value": "MemberFacts [stale=false, requestingFinanceHelp=true, newbornNoShow=false, renewalPeriodPast=false, epAptcClockExpired=false, fpl=0.0, maFplLevelforThisMember=0.0, irsFPL=0.0, lif=25000.0, parentCareTaker=false, careTakerRelative=false, enrolledInMedcaidM",
+      "value": "MemberFacts [stale=false, requestingFinanceHelp=true, newbornNoShow=false, renewalPeriodPast=false, epAptcClockExpired=false, fpl=0.0, maFplLevelforThisMember=0.0, irsFPL=0.0, lif=25000.0, parentCareTaker=false, careTakerRelative=false, enrolledInMedcaidM",
+      "process-instance-id": 444,
+      "modification-date": 1507052350873
+   },
+      {
+      "name": "memberFacts",
+      "old-value": "MemberFacts [stale=false, requestingFinanceHelp=true, newbornNoShow=false, renewalPeriodPast=false, epAptcClockExpired=false, fpl=0.0, maFplLevelforThisMember=0.0, irsFPL=0.0, lif=25000.0, parentCareTaker=false, careTakerRelative=false, enrolledInMedcaidM",
+      "value": "MemberFacts [stale=false, requestingFinanceHelp=true, newbornNoShow=false, renewalPeriodPast=false, epAptcClockExpired=false, fpl=0.0, maFplLevelforThisMember=0.0, irsFPL=0.0, lif=25000.0, parentCareTaker=false, careTakerRelative=false, enrolledInMedcaidM",
+      "process-instance-id": 444,
+      "modification-date": 1507052350830
+   },
+      {
+      "name": "memberFacts",
+      "old-value": "MemberFacts [stale=false, requestingFinanceHelp=true, newbornNoShow=false, renewalPeriodPast=false, epAptcClockExpired=false, fpl=0.0, maFplLevelforThisMember=0.0, irsFPL=0.0, lif=25000.0, parentCareTaker=false, careTakerRelative=false, enrolledInMedcaidM",
+      "value": "MemberFacts [stale=false, requestingFinanceHelp=true, newbornNoShow=false, renewalPeriodPast=false, epAptcClockExpired=false, fpl=0.0, maFplLevelforThisMember=0.0, irsFPL=0.0, lif=25000.0, parentCareTaker=false, careTakerRelative=false, enrolledInMedcaidM",
+      "process-instance-id": 444,
+      "modification-date": 1507052350773
+   },
+      {
+      "name": "memberFacts",
+      "old-value": "",
+      "value": "MemberFacts [stale=false, requestingFinanceHelp=true, newbornNoShow=false, renewalPeriodPast=false, epAptcClockExpired=false, fpl=0.0, maFplLevelforThisMember=0.0, irsFPL=0.0, lif=25000.0, parentCareTaker=false, careTakerRelative=false, enrolledInMedcaidM",
+      "process-instance-id": 444,
+      "modification-date": 1507052350702
+   }
+]}
+
+
+=======================================================
+Gettting A Completed Instance Variables: eligibilityResult
+=======================================================
+http://localhost:9080/kie-server/services/rest/server/queries/processes/instances/444/variables/instances/eligibilityResult
+{"variable-instance": [{
+   "name": "eligibilityResult",
+   "old-value": "",
+   "value": "EligbilityResult [Indicators=1. INELIGIBLE:true, reasons=1:FPLLEVEL-154, 2:3, 3:3-SCH_VERIFICATION_NOTICE]",
+   "process-instance-id": 444,
+   "modification-date": 1507052350933
+}]}
+
+http://localhost:9080/kie-server/services/rest/server/queries/processes/instances/451/variables/instances/eligibilityResult
+{"variable-instance": [{
+   "name": "eligibilityResult",
+   "old-value": "",
+   "value": "EligbilityResult [Indicators=1. INELIGIBLE:true, reasons=1:3, 2:3-STALE_MEM]",
+   "process-instance-id": 451,
+   "modification-date": 1507171328431
+}]}
+
+
+
+{
+"MemberFacts":
+{
+"stale":"false","firstName:"xxxxxx","requestingFinanceHelp":"false","newbornNoShow":"false"
+}
+}
+

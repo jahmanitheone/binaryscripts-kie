@@ -1,0 +1,107 @@
+Default DataSource Using H2 Kie
+--------------------------------------------------
+Home->Select Admin icon (Gear)->Data Sources (icon)
+
+o Key default datasources:
+ExampleDS (external) -- Not used for workflow
+H2DS (external)
+
+
+o H2DS (external) 
+Schemas:
+INFORMATION_SCHEMA (has no entries)
+PUBLIC (shows 45 tables):
+
+Name	Type	Action
+ATTACHMENT
+AUDITTASKIMPL
+BAMTASKSUMMARY
+BOOLEANEXPRESSION
+.
+.
+.
+
+
+H2 Datasource Configuration In Wildfly
+--------------------------------------------------
+standalone-full.xml
+.
+.
+
+<subsystem xmlns="urn:jboss:domain:datasources:4.0">
+	<datasources>
+		<datasource jndi-name="java:jboss/datasources/ExampleDS" pool-name="ExampleDS" enabled="true" use-java-context="true">
+			<connection-url>jdbc:h2:mem:test;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE</connection-url>
+			<driver>h2</driver>
+			<security>
+				<user-name>sa</user-name>
+				<password>sa</password>
+			</security>
+		</datasource>
+		<datasource jta="true" jndi-name="java:jboss/datasources/jbpmDS" pool-name="H2DS" enabled="true" use-java-context="true" use-ccm="true">
+			<connection-url>jdbc:h2:tcp://localhost/~/jbpm-db;MVCC=TRUE</connection-url>
+			<driver>h2</driver>
+			<security>
+				<user-name>sa</user-name>
+			</security>
+		</datasource>
+		<drivers>
+			<driver name="h2" module="com.h2database.h2">
+				<xa-datasource-class>org.h2.jdbcx.JdbcDataSource</xa-datasource-class>
+			</driver>
+		</drivers>
+	</datasources>
+</subsystem>
+
+
+
+Adding Mysql Datasource Configuration In Wildfly
+--------------------------------------------------
+standalone-full.xml
+.
+.
+
+<subsystem xmlns="urn:jboss:domain:datasources:4.0">
+	<datasources>
+		<datasource jndi-name="java:jboss/datasources/ExampleDS" pool-name="ExampleDS" enabled="true" use-java-context="true">
+			<connection-url>jdbc:h2:mem:test;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE</connection-url>
+			<driver>h2</driver>
+			<security>
+				<user-name>sa</user-name>
+				<password>sa</password>
+			</security>
+		</datasource>
+		<datasource jta="true" jndi-name="java:jboss/datasources/jbpmDS" pool-name="H2DS" enabled="true" use-java-context="true" use-ccm="true">
+			<connection-url>jdbc:h2:tcp://localhost/~/jbpm-db;MVCC=TRUE</connection-url>
+			<driver>h2</driver>
+			<security>
+				<user-name>sa</user-name>
+			</security>
+		</datasource>
+		<drivers>
+			<driver name="h2" module="com.h2database.h2">
+				<xa-datasource-class>org.h2.jdbcx.JdbcDataSource</xa-datasource-class>
+			</driver>
+		</drivers>
+	</datasources>
+</subsystem>
+
+
+
+Change default Datasource Name
+--------------------------------------------------
+o Change name from jbpm-db to jbpm-NYSOH-700
+- I am doing dual development via v7.0.0 and v7.5.0
+
+standalone-full.xml
+.
+.
+                <datasource jta="true" jndi-name="java:jboss/datasources/jbpmDS" pool-name="H2DS" enabled="true" use-java-context="true" use-ccm="true">
+                    <connection-url>jdbc:h2:tcp://localhost/~/jbpm-NYSOH-700;MVCC=TRUE</connection-url>
+                    <driver>h2</driver>
+                    <security>
+                        <user-name>sa</user-name>
+                    </security>
+                </datasource>
+
+Validate by connecting with H2 Database

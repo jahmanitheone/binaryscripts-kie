@@ -1,0 +1,162 @@
+GIT Repository URL
+---------------------------------
+- The repository is located at:
+/mnt/FTEMP2/CSRA/A-GIT/GITSANDBOX_TEMP/20171110v102
+
+- You will need to create the project GIT Repository in Kie Workbench using:
+file:////mnt/FTEMP2/CSRA/A-GIT/GITSANDBOX_TEMP/20171110v102/.git
+
+
+
+Workflow Eclipse Project Directory
+------------------------------------------------------
+Use eclipse(Neon)
+	/mnt/FBIN/eclipseoxygenjbpm/eclipse.exe
+	- It has drools intalled
+
+Workspace Directory:	
+	/mnt/FDEV/JBPM-PROJECTS/workspace-csra-temp
+
+
+Access A Local Created Git Project From Eclipse
+------------------------------------------------------
+o Go to Git Perspective
+Window->Perspective->Open Perspective->Other->Git
+
+o Select Add an Existing Local Git Repository
+Directory: /mnt/FTEMP2/CSRA/A-GIT/GITSANDBOX_TEMP/20171110v102/
+[Finish]
+
+You shoud see Git Repositories
+o Expand repository
+o "Working Tree" is where eclipse projects will appear
+
+
+
+Import Project As Maven Project
+--------------------------------------
+Select the following:
+
+File->Import->Git->Projects from Git
+Existing local repository->Next
+Select csra-work-flow-test
+
+Import existing Eclipse projects
+- You will see: Working Tree
+[Next]
+[Finish]
+
+
+Fixing Errors
+--------------------------------------
+o Update All Maven Projects
+Select All Projects (Edit->Select All, or Ctrl-A)
+Properties->Maven->Update Projects
+Select All
+[Ok]
+
+o Fixing Data Input Errors
+Note: 
+	This might be due to using the default editor:
+	BPMN2 Diagram Editor, instead of BPMN2 Process Editor
+	
+	See what I mean by:
+	1. Show MI_Main in default BPMN2 Diagram Editor
+		Select an error like: "Data Input memberFacts.." for MI_Main.bpmn2
+		Right click->Show In->Package Explorer
+		MI_Main.bpmn2 process is highlighted
+		Double click MI_Main.bpmn2
+		
+		A bunch of errors appear, 
+			these are saying that connectors are not set properly.
+		Ignore them
+		Click [Ok]
+
+		See! No connectors are set in MI_Main
+		Close Editor
+		
+	2. Show MI_Main in default BPMN2 Process Editor
+		Right click MI_Main.bpmn2->Open With->BPMN2 Process Editor
+		See! Connectors are set in MI_Main
+		
+		Some how, some way. I, we have to: 
+		set the default editor to: BPMN2 Process Editor
+		How, I don't know as of 01/27/2018.
+		
+	3. Ignore Errors
+	A. For select all the errors and Delete.
+	B. Force the use of editor: BPMN2 Process Editor
+	
+
+
+		
+		
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Import Project As Maven Project (Share Project)
+------------------------------------------------------
+o Go to Java Perspective
+Window->Perspective->Open Perspective->Other->Java
+
+File->Import->Existing Maven Projects
+Root Directory: C:\A-PRJ-DROOLS\kiedevbackups\20170724\hx-entity-medicalincome
+->Finish
+
+o Share Project with Git
+->Right Click project name
+->Team->Share Project	
+->Repository->Select sandboxkie
+Finish
+
+o Lots of question mark appear
+- Project artifacts are not added
+->Right Click project name
+->Team->Add To Index
+
+o Lots of asteriks appear
+- Files are not commited to repo yet
+->Right Click project name
+->Team->Commit
+->Add comment: "First Commit"
+Commit
+
+
+o View new Maven Project in repo
+->Go to Git Perspective
+- In Working Tree, see the new "hx-entity-medicalincome" projectg
+
+
+ 	
+
+
+
+	
+	

@@ -1,0 +1,102 @@
+View Specific Process Definition
+--------------------------------------------------------------
+http://localhost:9080/kie-server/services/rest/server/containers/hx-eligibility-workflows_1.0.2/processes/definitions/MI_Main/
+	<process-definition>
+		<process-id>MI_Main</process-id>
+		<process-name>MI_Main</process-name>
+		<process-version>1.0</process-version>
+		<package>com.csra.eligibility.process.medicaidincome</package>
+		<container-id>hx-eligibility-workflows_1.0.2</container-id>
+		<associated-entities/>
+		<service-tasks/>
+		<process-variables>
+		<entry>
+		<key>reasons</key>
+		<value>String</value>
+		</entry>
+		<entry>
+		<key>eligibilityResult</key>
+		<value>
+		com.csra.eligibility.domain.eligibility.EligibilityResult
+		</value>
+		</entry>
+		<entry>
+		<key>WFUtil</key>
+		<value>com.csra.eligibility.workflow.util.WorkFlowUtil</value>
+		</entry>
+		<entry>
+		<key>memberFacts</key>
+		<value>
+		com.csra.eligibility.domain.entity.member.MemberFacts
+		</value>
+		</entry>
+		<entry>
+		<key>indicators</key>
+		<value>String</value>
+		</entry>
+		</process-variables>
+		<process-subprocesses>
+		<reusableSubProcesses>MI_Ineligible_Prechecks</reusableSubProcesses>
+		<reusableSubProcesses>MI_Incometype_Determination</reusableSubProcesses>
+		<reusableSubProcesses>MI_CoverageCode</reusableSubProcesses>
+		<reusableSubProcesses>MI_FPL_Level_Determination</reusableSubProcesses>
+		<reusableSubProcesses>MI_Resonable_Compatibility</reusableSubProcesses>
+		<reusableSubProcesses>MI_AidCategory</reusableSubProcesses>
+		</process-subprocesses>
+		<dynamic>false</dynamic>
+	</process-definition>
+	
+View Specific Process Definition - Variables
+--------------------------------------------------------------
+http://localhost:9080/kie-server/services/rest/server/containers/hx-eligibility-workflows_1.0.2/processes/definitions/MI_Main/variables/	
+<process-variables>
+		<variables>
+		<entry>
+		<key>reasons</key>
+		<value>String</value>
+		</entry>
+		<entry>
+		<key>eligibilityResult</key>
+		<value>
+		com.csra.eligibility.domain.eligibility.EligibilityResult
+		</value>
+		</entry>
+		<entry>
+		<key>WFUtil</key>
+		<value>com.csra.eligibility.workflow.util.WorkFlowUtil</value>
+		</entry>
+		<entry>
+		<key>memberFacts</key>
+		<value>
+		com.csra.eligibility.domain.entity.member.MemberFacts
+		</value>
+		</entry>
+		<entry>
+		<key>indicators</key>
+		<value>String</value>
+		</entry>
+		</variables>
+	</process-variables>
+
+View Specific Process Definition - Entities
+--------------------------------------------------------------
+http://localhost:9080/kie-server/services/rest/server/containers/hx-eligibility-workflows_1.0.2/processes/definitions/MI_Main/entities
+<process-subprocesses>
+<subprocesses/>
+</process-subprocesses>
+
+	
+View Specific Process Definition - Subprocess
+--------------------------------------------------------------
+http://localhost:9080/kie-server/services/rest/server/containers/hx-eligibility-workflows_1.0.2/processes/definitions/MI_Main/subprocesses/	
+	<process-subprocesses>
+	<subprocesses>
+	<subProcesses>MI_Ineligible_Prechecks</subProcesses>
+	<subProcesses>MI_Incometype_Determination</subProcesses>
+	<subProcesses>MI_CoverageCode</subProcesses>
+	<subProcesses>MI_FPL_Level_Determination</subProcesses>
+	<subProcesses>MI_Resonable_Compatibility</subProcesses>
+	<subProcesses>MI_AidCategory</subProcesses>
+	</subprocesses>
+	</process-subprocesses>	
+

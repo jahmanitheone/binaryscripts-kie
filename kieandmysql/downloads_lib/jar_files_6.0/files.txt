@@ -1,0 +1,5 @@
+* These are the files in this directory, jar, war are deleted for git upload:
+
+kie-wb-distribution-wars-6.0.0.Final.pom
+kie-wb-distribution-wars-6.0.0.Final-tests.jar
+kie-wb-distribution-wars-6.0.0.Final-tomcat7.war

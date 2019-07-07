@@ -1,0 +1,3 @@
+Git Installed 
+-----------------------------------------
+dnf install git

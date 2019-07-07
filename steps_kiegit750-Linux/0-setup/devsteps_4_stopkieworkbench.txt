@@ -1,0 +1,16 @@
+Stop KIE Workbench using: jstop
+---------------------------------------------------------
+cd /mnt/FBIN/jbpm-installer-full-7.5.0.Final
+jstop
+
+
+jstop - Stop using ant stop
+---------------------------------------------------------
+#!/bin/sh
+
+CMD="ant stop.demo"
+echo CMD=$CMD
+
+$CMD
+
+

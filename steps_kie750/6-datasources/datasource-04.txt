@@ -1,0 +1,108 @@
+Configuring MySQL using Intaller
+--------------------------------------------------
+https://docs.jboss.org/jbpm/release/7.5.0.Final/jbpm-docs/html_single/
+
+
+Disable H2 default database and enable MySQL
+--------------------------------------------------
+build.properties
+C:\bin\jbpm-installer-7.5.0.Final\build.properties
+
+# default is H2
+# H2.version=1.3.168
+# db.name=h2
+# db.driver.jar.name=${db.name}.jar
+# db.driver.download.url=http://repo1.maven.org/maven2/com/h2database/h2/${H2.version}/h2-${H2.version}.jar
+
+
+Enable MySQL
+-----------------------------
+db.name=mysql
+db.driver.module.prefix=com/mysql
+db.driver.jar.name=mysql-connector-java-5.1.18.jar
+db.driver.download.url=https://repository.jboss.org/nexus/service/local/repositories/central/content/mysql/mysql-connector-java/5.1.18/mysql-connector-java-5.1.18.jar
+org.kie.server.persistence.dialect=org.hibernate.dialect.MySQLDialect
+
+
+Change JPA to MySQL
+--------------------------------
+db\jbpm-persistence-JPA2.xml
+
+Disable H2:
+      <!--property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect" /--
+
+Enable MySQL:
+	<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
+	
+	
+	
+Change the standalone-full.xml DataSource
+--------------------------------------------------------
+wildfly-10.1.0.Final\standalone\configuration\standalone-full.xml
+
+Disable H2:
+<!--
+	<datasource jta="true" jndi-name="java:jboss/datasources/jbpmDS" pool-name="H2DS" enabled="true" use-java-context="true" use-ccm="true">
+		<connection-url>jdbc:h2:tcp://localhost/~/jbpm-db;MVCC=TRUE</connection-url>
+		<driver>h2</driver>
+		<security>
+		   <user-name>sa</user-name>
+		</security>
+	</datasource>
+	<drivers>
+		<driver name="h2" module="com.h2database.h2">
+			<xa-datasource-class>org.h2.jdbcx.JdbcDataSource</xa-datasource-class>
+		</driver>
+	</drivers>
+-->
+
+
+Enable Mysql:
+	<datasource jta="true" jndi-name="java:jboss/datasources/jbpmDS" pool-name="MySQLDS" enabled="true" use-java-context="true" use-ccm="true">
+		<connection-url>jdbc:mysql://localhost:3306/jbpm</connection-url>
+		<driver>mysql</driver>
+		<security>
+			<user-name>jbpm</user-name>
+			<password>jbpm</password>
+		</security>
+	</datasource>
+
+	
+Add additional driver below H2's:
+from:
+	<drivers>
+		<driver name="h2" module="com.h2database.h2">
+			<xa-datasource-class>org.h2.jdbcx.JdbcDataSource</xa-datasource-class>
+		</driver>
+	</drivers>
+to:
+	<drivers>
+		<driver name="h2" module="com.h2database.h2">
+			<xa-datasource-class>org.h2.jdbcx.JdbcDataSource</xa-datasource-class>
+		</driver>
+		<driver name="mysql" module="com.mysql">
+			<xa-datasource-class>com.mysql.jdbc.jdbc2.optional.MysqlXADataSource</xa-datasource-class>
+		</driver>					
+	</drivers>
+
+Installer will install MySql Driver Jars
+	db/mysql_module.xml	
+
+	Note the build.properties has this definition:
+		db.driver.module.prefix=com/mysql
+
+	Here is mysql_module.xml content:		
+		<module xmlns="urn:jboss:module:1.0" name="com.mysql">
+		   <resources>
+			 <resource-root path="mysql-connector-java.jar"/>
+		   </resources>
+
+		   <dependencies>
+			  <module name="javax.api"/>
+			  <module name="javax.transaction.api"/>
+			</dependencies>
+		</module>
+	
+
+Stop/Start Demo
+-----------------------------------

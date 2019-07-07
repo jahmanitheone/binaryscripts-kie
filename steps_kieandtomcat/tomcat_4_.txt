@@ -1,0 +1,20 @@
+1.
+Download kie-server- -webc.war and place it into TOMCAT_HOME/webapps.
+
+2.
+Configure user(s) and role(s). Make sure that file TOMCAT_HOME/conf/tomcat-users.xml 
+<role rolename="kie-server"/>
+<user username="serveruser" password="my.s3cr3t.pass" roles="kie-server"/>
+
+3.
+Start the server by running TOMCAT_HOME/bin/startup.[sh|bat]. 
+./startup.sh -Dorg.kie.server.id=first-kie-server -Dorg.kie.server.location=http://localhost:8080/kie-server/services/rest/server
+
+
+4.
+You can check out the Tomcat logs in TOMCAT_HOME/logs to see if the application deployed successfully.
+
+5.
+http://SERVER:PORT/CONTEXT/services/rest/server/ 
+
+

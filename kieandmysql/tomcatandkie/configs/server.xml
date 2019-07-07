@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+.
+.
+- Near top of server.xml
+<Listener className="bitronix.tm.integration.tomcat55.BTMLifecycleListener"/>
+
+.
+.
+- Near bottom of server.xml
+<Valve className="org.kie.integration.tomcat.JACCValve" />

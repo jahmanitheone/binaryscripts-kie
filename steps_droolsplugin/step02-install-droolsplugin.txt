@@ -1,0 +1,27 @@
+Linux Plugin Directory
+---------------------------------
+/run/media/pchauvet/easystore/LINUX/DOWNLOADS/DEV/REDHAT/DROOLS/DROOLS7/DROOLS72/droolsjbpm-tools-distribution-7.20.0.Final/binaries/org.drools.updatesite
+
+
+Download Drools Plugin
+---------------------------------
+http://www.drools.org/download/download.html
+o Select Drools and jBPM tools -> Distribution ZIP
+https://download.jboss.org/drools/release/7.20.0.Final/droolsjbpm-tools-distribution-7.20.0.Final.zip
+
+
+
+Installing the plugins in Eclipse Download Eclipse
+------------------------------------------------------------
+- Open Eclipse.
+- Open the menu "Help", menu item "Install new software..."
+- Click on the button "Add..." to add a new software site.
+- Fill in the name "Drools7"
+- Click on the button "Local..." and select "file:///mnt/FBIN/DROOLSLIB/drools72/droolsjbpm-tools-distribution-7.20.0.Final/binaries/org.drools.updatesite"
+- Select all the plugins. Click the buttons "Next" and "Finish".
+- Restart eclipse
+
+
+
+Installing the plugins in Eclipse Download Eclipse
+------------------------------------------------------------

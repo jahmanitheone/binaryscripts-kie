@@ -1,0 +1,141 @@
+View Deployed Containers
+--------------------------------------------------------------
+http://localhost:9080/kie-server/services/rest/server/containers/
+pchauvet/pchauvet
+
+Result:
+	<response type="SUCCESS" msg="List of created containers">
+		<kie-containers>
+		<kie-container container-alias="hx-eligibility-workflows" container-id="hx-eligibility-workflows_1.0.2" status="STARTED">
+			<config-items>
+			<itemName>KBase</itemName>
+			<itemValue/>
+			<itemType>BPM</itemType>
+			</config-items>
+			<config-items>
+			<itemName>KSession</itemName>
+			<itemValue/>
+			<itemType>BPM</itemType>
+			</config-items>
+			<config-items>
+			<itemName>MergeMode</itemName>
+			<itemValue>MERGE_COLLECTIONS</itemValue>
+			<itemType>BPM</itemType>
+			</config-items>
+			<config-items>
+			<itemName>RuntimeStrategy</itemName>
+			<itemValue>SINGLETON</itemValue>
+			<itemType>BPM</itemType>
+			</config-items>
+			<messages>
+			<content>
+			Container hx-eligibility-workflows_1.0.2 successfully created with module com.csra.eligibility:hx-eligibility-workflows:1.0.2.
+			</content>
+			<severity>INFO</severity>
+			<timestamp>2018-01-25T11:29:19.795-05:00</timestamp>
+			</messages>
+			<release-id>
+			<artifact-id>hx-eligibility-workflows</artifact-id>
+			<group-id>com.csra.eligibility</group-id>
+			<version>1.0.2</version>
+			</release-id>
+			<resolved-release-id>
+			<artifact-id>hx-eligibility-workflows</artifact-id>
+			<group-id>com.csra.eligibility</group-id>
+			<version>1.0.2</version>
+			</resolved-release-id>
+			<scanner status="DISPOSED"/>
+		</kie-container>
+		<kie-container container-alias="hx-eligibility-dto" container-id="hx-eligibility-dto_1.0.2" status="STARTED">
+			<config-items>
+			<itemName>KBase</itemName>
+			<itemValue/>
+			<itemType>BPM</itemType>
+			</config-items>
+			<config-items>
+			<itemName>KSession</itemName>
+			<itemValue/>
+			<itemType>BPM</itemType>
+			</config-items>
+			<config-items>
+			<itemName>MergeMode</itemName>
+			<itemValue>MERGE_COLLECTIONS</itemValue>
+			<itemType>BPM</itemType>
+			</config-items>
+			<config-items>
+			<itemName>RuntimeStrategy</itemName>
+			<itemValue>SINGLETON</itemValue>
+			<itemType>BPM</itemType>
+			</config-items>
+			<messages>
+			<content>
+			Container hx-eligibility-dto_1.0.2 successfully created with module com.csra.eligibility:hx-eligibility-dto:1.0.2.
+			</content>
+			<severity>INFO</severity>
+			<timestamp>2018-01-25T11:29:20.029-05:00</timestamp>
+			</messages>
+			<release-id>
+			<artifact-id>hx-eligibility-dto</artifact-id>
+			<group-id>com.csra.eligibility</group-id>
+			<version>1.0.2</version>
+			</release-id>
+			<resolved-release-id>
+			<artifact-id>hx-eligibility-dto</artifact-id>
+			<group-id>com.csra.eligibility</group-id>
+			<version>1.0.2</version>
+			</resolved-release-id>
+			<scanner status="DISPOSED"/>
+		</kie-container>
+		</kie-containers>
+	</response>
+
+	
+View Specific Deployed Containers
+--------------------------------------------------------------
+http://localhost:9080/kie-server/services/rest/server/containers/hx-eligibility-workflows_1.0.2	
+
+Result:
+	<response type="SUCCESS" msg="List of created containers">
+		<kie-containers>
+		<kie-container container-alias="hx-eligibility-workflows" container-id="hx-eligibility-workflows_1.0.2" status="STARTED">
+			<config-items>
+			<itemName>KBase</itemName>
+			<itemValue/>
+			<itemType>BPM</itemType>
+			</config-items>
+			<config-items>
+			<itemName>KSession</itemName>
+			<itemValue/>
+			<itemType>BPM</itemType>
+			</config-items>
+			<config-items>
+			<itemName>MergeMode</itemName>
+			<itemValue>MERGE_COLLECTIONS</itemValue>
+			<itemType>BPM</itemType>
+			</config-items>
+			<config-items>
+			<itemName>RuntimeStrategy</itemName>
+			<itemValue>SINGLETON</itemValue>
+			<itemType>BPM</itemType>
+			</config-items>
+			<messages>
+			<content>
+			Container hx-eligibility-workflows_1.0.2 successfully created with module com.csra.eligibility:hx-eligibility-workflows:1.0.2.
+			</content>
+			<severity>INFO</severity>
+			<timestamp>2018-01-25T11:29:19.795-05:00</timestamp>
+			</messages>
+			<release-id>
+			<artifact-id>hx-eligibility-workflows</artifact-id>
+			<group-id>com.csra.eligibility</group-id>
+			<version>1.0.2</version>
+			</release-id>
+			<resolved-release-id>
+			<artifact-id>hx-eligibility-workflows</artifact-id>
+			<group-id>com.csra.eligibility</group-id>
+			<version>1.0.2</version>
+			</resolved-release-id>
+			<scanner status="DISPOSED"/>
+		</kie-container>
+		</kie-containers>
+	</response>

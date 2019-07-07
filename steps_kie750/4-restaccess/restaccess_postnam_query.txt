@@ -1,0 +1,41 @@
+Workflow using Chrome Postname
+--------------------------------------------------------------
+
+Query Process ID: 7
+-----------------------
+
+Create Task In PostMan
+	Action: GET
+	Url: http://localhost:9080/kie-server/services/rest/server/queries/processes/instances/7/variables/instances/eligibilityResult
+	Authorization: Basic, use your KIE server user id/password. Mine is pchauvet/pchauvet
+	Headers: 
+		Content-Type: application/json
+	[SEND]
+	
+Returns:
+	{
+	  "variable-instance" : [ {
+		"name" : "eligibilityResult",
+		"old-value" : "EligbilityResult [Indicators=, reasons=]",
+		"value" : "EligbilityResult [Indicators=1. INELIGIBLE:true, reasons=1:3, 2:3-RPIDNA]",
+		"process-instance-id" : 7,
+		"modification-date" : {
+	  "java.util.Date" : 1516898329854
+	}
+	  }, {
+		"name" : "eligibilityResult",
+		"old-value" : "",
+		"value" : "EligbilityResult [Indicators=, reasons=]",
+		"process-instance-id" : 7,
+		"modification-date" : {
+	  "java.util.Date" : 1516898329641
+	}
+	  } ]
+	}	
+	
+Note:
+		EligbilityResult is truncated
+		TODO:
+			Show all of result information
+			
+			

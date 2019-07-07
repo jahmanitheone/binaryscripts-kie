@@ -1,0 +1,23 @@
+User are configured in wildfly
+-----------------------------------------------
+/mnt/FBIN/jbpm-installer-7.0.0.Final/wildfly-10.1.0.Final/standalone/configuration
+
+
+Add User to allow RESTAPI access
+-----------------------------------------------
+cd /mnt/FBIN/jbpm-installer-7.0.0.Final/wildfly-10.1.0.Final/bin/
+
+o This user is needed to do rest services
+add-user -a -u kieserver -p kieserver -ro admin,kie-server,rest-all,kiemgmt
+add-user -a -u kieserver -p kieserver -ro admin,kie-server,rest-all,kiemgmt
+
+
+
+Login as pchauvet
+-------------------------
+pchauvet pchauvet
+
+
+Other Available User
+-------------------------
+krisv krisv 

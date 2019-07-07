@@ -1,0 +1,59 @@
+Run The Medical Income Process Definitions
+--------------------------------------------------
+Home->Manage (icon)->Click <process definition> link
+o Select Process Management->Process Definitions
+- you will see:
+MI_AidCategory
+MI_CoverageCode
+MI_FPL_Level_Determination
+MI_Incometype_Determination
+MI_Ineligible_Prechecks
+MI_Main
+MI_Renewals
+MI_Resonable_Compatibility
+
+
+Run The Main Process
+---------------------------------
+o MI_Main is the main execution process for Workflows
+- Select its [Start] button
+- the MI_Main form will appear
+
+o [Submit] the the MI_Main form
+- A process ID will be return
+- We can review the [Process Variables]
+
+
+Viewing the Process Model That Was Exceuted From Process Definitioins Screen 
+----------------------------------------------------------------------------
+o After submitting the MI_Main process
+- A <process id> - MI_Main will show on the righ panel. Ex: 7-MI_Main
+o <Options> Drop Down
+- Select Process Model 
+- We see the greyed execution path for the process
+o Drill into a sub-process execution, the ones with {+} in process
+- Any thing else will reload the page
+
+
+Viewing the Process Model That Was Exceuted From Process Instance
+-----------------------------------------------------------------------
+o Select Process Management->Process Instances
+- You will see multiple instances
+- Select the Process ID for MI_Main
+o At the [ptions drop down]->Select Process Model
+- We see the greyed execution path for the process
+o Drill into a sub-process execution, the ones with {+} in process
+- Any thing else will reload the page
+
+
+
+Viewing the Process Instances
+---------------------------------
+Home->Manage (icon)->process instance->Completed
+- You will see multiple instances
+- Select the Process ID for MI_Main
+- We see the greyed execution path for the process
+o Drill into a sub-process execution, the ones with {+} in process
+- Any thing else will reload the page
+
+

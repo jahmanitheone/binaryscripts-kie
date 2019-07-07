@@ -1,0 +1,95 @@
+My Local Latest DevRepo
+---------------------------------
+See 1-git/gitsteps_02_clonenysohrepo.txt
+- Shows how to clone git from NYSOH repository
+
+- The repository is located at:
+/mnt/FTEMP2/CSRA/A-GIT/GITSANDBOX_TEMP/20171110v102
+
+
+GIT Repository URL
+---------------------------------
+file:////mnt/FTEMP2/CSRA/A-GIT/GITSANDBOX_TEMP/20171110v102/.git
+- You will need to create the project GIT Repository in Kie Workbench
+
+
+Clone Git Repository In Kie Workbench
+---------------------------------------------
+Home->Design (icon)->Projects
+Import Project->Repository URL:
+
+file:////mnt/FTEMP2/CSRA/A-GIT/GITSANDBOX_TEMP/20171110v102/.git
+
+
+o Select projects:
+hx-eligibility-dto
+hx-eligibility-workflows
+[Ok]
+
+o The project will load and show how many objects it loaded (indexed)
+hx-eligibility-dto - 9 entities
+hx-eligibility-workflows - 25 entities
+
+
+
+
+
+
+
+
+
+
+
+
+Deploy Git Repository
+---------------------------------------------
+Home->Deveops (gear icon)->deployments
+Providers Types->openshift 3.6->Add Providers
+Provider Type: OpenShift
+Provider Name: MedicalIncome
+Master Url:	file:////mnt/FTEMP2/CSRA/A-GIT/GITSANDBOX_TEMP/20171110v102.git
+Username: pchauvet
+Password: pchauvet
+[Finish]
+
+
+
+- You should see in the File Explorer:
+MedicalIncome
+	.project
+	.settings
+	README.md
+	hooks
+	hx-eligibility-dto
+	hx-eligibility-parent
+	hx-eligibility-readmes
+	hx-eligibility-testbase
+	hx-eligibility-workflows-rest
+	hx-eligibility-workflows-resttest
+	hx-eligibility-workflows-test
+	hx-eligibility-workflows
+	pom.xml
+
+	
+List Repository
+----------------------------------------
+Authoring->Adminsitration->Repositories->List
+
+- You should see Repository: MedicalIncome
+- The git local url in the Kie Workbnech:
+git://localhost:9418/MedicalIncome	
+
+
+
+
+xxxClone Git Repository In Kie Workbench
+---------------------------------------------
+Admin->Libray (icon)->Library Preferences->Organization Units
+	Name: csra-workflow
+	Owner: pchauvet
+	Group ID: com.csra.workflows
+	Alias (in singular):  csra-workflow
+	Alias (in plural): csra-workflow
+Admin->Libray (icon)->Library Preferences->Repositories
+	Name: csra-workflow
+	Scheme: git

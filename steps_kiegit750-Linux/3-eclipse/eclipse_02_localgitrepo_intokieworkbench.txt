@@ -1,0 +1,23 @@
+My Local Latest DevRepo
+---------------------------------
+See 1-git/gitsteps_02_clonenysohrepo.txt
+- Shows how to clone git from NYSOH repository
+
+- The repository is located at:
+/mnt/FTEMP2/CSRA/A-GIT/GITSANDBOX_PROD/20171115a
+
+- GIT Repository URL
+file:////mnt/FTEMP2/CSRA/A-GIT/GITSANDBOX_PROD/20171115a/.git
+- You will need to create the project GIT Repository in Kie Workbench
+
+
+- The repository is located at:
+/mnt/FTEMP2/CSRA/A-GIT/GITSANDBOX_PROD/20171115a
+
+
+GIT Repository URL
+---------------------------------
+file:////mnt/FTEMP2/CSRA/A-GIT/GITSANDBOX_PROD/20171115a/.git
+
+- You will need to create the project GIT Repository in Kie Workbench
+

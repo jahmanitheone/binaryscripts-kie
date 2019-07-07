@@ -1,0 +1,41 @@
+Error: Process Variables More Than 255 characters
+----------------------------------------------------------
+Error:
+org.jbpm.process.audit.VariableInstanceLog] (default task-47) Variable content was trimmed as it was too long (more than 255 characters)
+
+Solution 1:
+	https://issues.jboss.org/browse/JBPM-4889?_sscc=t	
+
+
+	A. build.xml
+	set org.jbpm.var.log.length to 5000, add at start.jboss in build.xml
+		
+	<target name="start.jboss">
+		<property name="jboss.full.path.win" location="${jboss.home}/bin/standalone.bat" />
+		<exec executable="${jboss.full.path.win}" spawn="yes" osfamily="windows">
+		.
+		.
+		  <arg value="-Dorg.jbpm.var.log.length=5000"/>
+
+	B. Change column OLDVALUE and VALUE to 5000 char for table: VARIABLEINSTANCELOG
+	
+	B1. Set up the H2 Database
+	    -- See h2start.sh	
+		#!/bin/bash
+		cd /mnt/FBIN/h2db/bin
+		pwd
+		./h2server.sh
+ 
+            -- The JBPM H2 database is deployed at: 
+	       /home/pchauvet/jbpm-db.h2.db
+
+	    -- In browser select
+            Saved Settings: Generic H2 (Server)
+            jdbc:h2:tcp://localhost/~/jbpm-db
+            				
+			
+	B2. Table: variableinstancelog
+		ALTER TABLE VARIABLEINSTANCELOG ALTER COLUMN OLDVALUE VARCHAR(5000) DEFAULT NULL;
+		ALTER TABLE VARIABLEINSTANCELOG ALTER COLUMN VALUE VARCHAR(5000) DEFAULT NULL;
+		COMMIT;
+	

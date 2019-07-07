@@ -1,0 +1,34 @@
+Start KIE Workbench
+-----------------------------
+jstart.cmd
+
+
+jstart.cmd script
+-------------------
+echo off
+call jstart_step1
+call jtaillog
+
+
+jstart_step1 script
+-------------------
+echo off
+call setant
+
+set CMD=ant start.demo.noeclipse
+echo .
+echo CMD=%CMD%
+echo .
+
+%CMD%
+
+
+jtaillog script
+-------------------
+tail -f -n100 .\wildfly-10.1.0.Final\standalone\log\server.log
+
+
+View KIE Workbench
+--------------------------------------------------
+http://localhost:8080/jbpm-console/kie-wb.jsp
+

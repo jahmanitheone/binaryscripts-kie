@@ -1,0 +1,36 @@
+Create New User In KIE Workbench
+-----------------------------------------------
+o Create user: pchauvet / pchauvet
+o Home->Select Admin icon (Gear)->Users (icon)
+o [New User]
+pchauvet 
+[Create]
+password: pchauvet
+[Change]
+
+
+o Create Group
+[Edit] [Add to group]
+kiemgmt
+rest-all
+kie-server
+[Add to selected groups]
+[Save]
+
+
+o Add Roles:
+[Edit]
+Add roles
+process-admin
+manager	
+admin	
+developer	
+user	
+[Add to selected roles]
+[Save]
+
+
+Login as pchauvet
+-------------------------
+pchauvet pchauvet
+

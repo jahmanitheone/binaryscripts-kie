@@ -1,0 +1,5 @@
+kie-wb-distribution-wars-7.0.0-20170228.182206-1287-eap7.war
+kie-wb-distribution-wars-7.0.0-20170228.182206-1287.pom
+kie-wb-distribution-wars-7.0.0-20170228.182206-1287-tomcat8.war
+kie-wb-distribution-wars-7.0.0-20170228.182206-1287-wildfly10.war
+

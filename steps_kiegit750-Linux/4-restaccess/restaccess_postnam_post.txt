@@ -1,0 +1,112 @@
+Workflow using Chrome Postnam
+--------------------------------------------------------------
+Download from:
+	https://app.getpostman.com/app/download/linux64?_ga=2.27875708.1771067290.1517200471-1541464545.1517200471
+
+
+Run Postman
+----------------------------------
+/mnt/FBIN/Postman
+./Postman
+
+- I did not sign up
+
+
+Create A Process ID
+---------------------------------------------
+Create Task In PostMan
+Action: POST
+Url: 	
+Authorization: 
+	Basic, use your KIE server user id/password. 
+	Mine is pchauvet/pchauvet
+Headers: 
+	Content-Type: application/json
+Body: 
+	raw, Not text/plain, but JSON(application/json) from drop down
+	Inputs:
+
+
+-----------------------------------
+REST Service Test Scenarios
+-----------------------------------
+o Stale
+{
+	"memberFacts": 
+	{
+		"com.csra.eligibility.domain.entity.member.MemberFacts": {
+			"stale": "true",
+			"houseHoldIncome": "55000",
+			"age": "55"
+		}
+	}
+}	
+	
+Returns 
+	Status: 201 created and taks id is returned: Example: 399
+
+o Not Request Financial Assistance
+{
+	"memberFacts": 
+	{
+		"com.csra.eligibility.domain.entity.member.MemberFacts": {
+			"houseHoldIncome": "55000",
+			"age": "55"
+		}
+	}
+}		
+
+o Eligible
+{
+	"memberFacts": 
+	{
+		"com.csra.eligibility.domain.entity.member.MemberFacts": {
+			"houseHoldIncome":"15000",
+			"age":"18",
+			"lif":" 25000",
+			"pregnant":"true",
+			"requestingFinanceHelp":"true",
+			"proposedEligibility":"true",
+			"incomeVerificationComplete":"true",
+			"compitableIncomeSourcesAvailable":"true",
+			"useCurrentIncome":"true",
+			"currentIncomeVerificationNoticeSent":"true"
+		}
+	}
+}		
+
+o Pending
+{
+	"memberFacts": 
+	{
+		"com.csra.eligibility.domain.entity.member.MemberFacts": {
+			"houseHoldIncome":"15000",
+			"age":"18",
+			"lif":" 25000",
+			"requestingFinanceHelp":"true",
+			"proposedEligibility":"true",
+			"incomeVerificationComplete":"true",
+			"compitableIncomeSourcesAvailable":"true",
+			"useCurrentIncome":"true",
+			"currentIncomeVerificationNoticeSent":"true"
+		}
+	}
+}		
+
+o Ineligible
+{
+	"memberFacts": 
+	{
+		"com.csra.eligibility.domain.entity.member.MemberFacts": {
+			"houseHoldIncome":"15000",
+			"age":"18",
+			"lif":" 25000",
+			"requestingFinanceHelp":"true",
+			"proposedEligibility":"true",
+			"incomeVerificationComplete":"true",
+			"compitableIncomeSourcesAvailable":"true",
+			"currentIncomeVerificationNoticeSent":"true"
+		}
+	}
+}		
+

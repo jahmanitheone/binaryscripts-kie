@@ -1,0 +1,65 @@
+Stop KIE Workbench using: jstop.cmd
+---------------------------------------------------------
+cd c:/bin/jbpm-installer-7.0.0.Final
+jstop.cmd
+
+
+jstop.cmd - Stop using ant stop
+---------------------------------------------------------
+echo off
+
+call jstopkie
+
+call jstopjavaexe
+
+
+jstopkie
+---------------------
+echo off
+call setant
+
+set CMD=ant stop.demo
+echo .
+echo CMD=%CMD%
+echo .
+%CMD%
+
+jstopjavaexe
+---------------------
+echo off
+
+rem Kill all java.exe processes
+set CMD=taskkill /FI "Imagename eq java.exe" /f
+echo .
+echo CMD=%CMD%
+echo .
+%CMD%
+
+
+o Note:
+	You can log out of Kie Workbench. It would be saver to do so.
+
+	
+Kill Process Using Command Line
+---------------------------------------------------------
+o List all task with name java.exe
+tasklist /FI "Imagename eq java.exe"
+- shows process id 
+java.exe         4664 
+
+o Kill all task with name java.exe
+taskkill /FI "Imagename eq java.exe" /f
+
+
+Viewing KIE Workbench Processes In Task Manager
+--------------------------------------------------
+o Go to windows Start Task Manager
+o Or search for: view running processes With Task Manager
+
+Forcibly Stop KIE Workbench In Task Manager
+--------------------------------------------------
+o Go to windows Start Task Manager
+
+- Look for java.exe processes
+- I stoped all
+

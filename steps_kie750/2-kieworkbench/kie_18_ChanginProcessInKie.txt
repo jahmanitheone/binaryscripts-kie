@@ -1,0 +1,7 @@
+Changing Processes in Kie Workbench
+--------------------------------------------------
+Home->Projects(Design icon)->projects
+o Select a project: hx-eligibility-workflows
+
+o Click a Process To update
+MI_Main

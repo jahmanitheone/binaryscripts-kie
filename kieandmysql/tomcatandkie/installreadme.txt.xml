@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+    <WatchedResource>
+	.
+	.
+	
+	<Transaction factory=”bitronix.tm.BitronixUserTransactionObjectFactory” />
+	<Resource name=”jdbc/jbpm” auth=”Container” type=”javax.sql.DataSource”
+factory=”bitronix.tm.resource.ResourceObjectFactory” uniqueName=”jdbc/jbpm” />
+
+	.
+	
+</Context>

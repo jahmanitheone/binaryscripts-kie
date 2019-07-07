@@ -1,0 +1,1 @@
+wget --no-check-certificate https://download.jboss.org/jbpm/release/7.0.0.Final/jbpm-installer-7.0.0.Final.zip

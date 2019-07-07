@@ -1,0 +1,11 @@
+Create New Organizational Unit Manager
+-------------------------------------------
+Home->Select Admin (Gear)
+Select Libray (icons)
+
+Select Organizational Units
+
+Name: csra-workflow
+Owner: pchauvet
+Group ID: com.csra.workflows
+[Save]

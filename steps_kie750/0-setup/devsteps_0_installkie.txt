@@ -1,0 +1,53 @@
+Site And Resources
+---------------------------------------------------------
+https://docs.jboss.org/jbpm/release/7.5.0.Final/jbpm-docs/html_single/
+http://downloads.jboss.org/jbpm/release/7.5.0.Final/jbpm-installer-full-7.5.0.Final.zip	
+
+Source Code
+------------------------
+http://downloads.jboss.org/jbpm/release/7.5.0.Final/updatesite/
+
+
+Download KIE jbpm-installer-full-7.5.0.Final.zip
+-----------------------------------------------------
+Unzip to c:/bin/jbpm-installer-full-7.5.0.Final
+
+
+Install KIE Artifacts Using j_install.cmd
+--------------------------------------------
+cd c:/bin/jbpm-installer-7.5.0.Final
+j_install.cmd
+
+o Here is j_install.cmd script:
+echo off
+rem .
+rem . setant
+rem .
+set CMD=call setant
+echo .
+echo CMD=%CMD%
+echo .
+%CMD%
+
+set CMD=ant install.demo.noeclipse
+echo CMD=%CMD%
+echo .
+
+%CMD%
+
+
+Add Default Users - use setuser.cmd
+-----------------------------------------------
+cd C:\bin\jbpm-installer-7.5.0.Final
+setupuser.cmd
+
+Here is script for setuser.cmd:
+set WILDFILY_HOME=C:\bin\jbpm-installer-7.5.0.Final\wildfly-10.1.0.Final\
+echo .
+echo WILDFILY_HOME=%WILDFILY_HOME%
+echo .
+
+%WILDFILY_HOME%/bin/add-user.bat --user-properties %WILDFILY_HOME%/standalone/configuration/users.properties  --group-properties %WILDFILY_HOME%/standalone/configuration/roles.properties  --realm ApplicationRealm admin admin --silent
+pause
+
+

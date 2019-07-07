@@ -1,0 +1,37 @@
+Start KIE Workbench
+--------------------------------------------------
+cdbj7
+
+/mnt/FBIN/jbpm-installer-7.0.0.Final/
+. jstart
+
+View KIE Workbench In Browser
+--------------------------------------------------
+http://localhost:8080/jbpm-console/kie-wb.jsp
+
+- Login as:
+admin admin
+
+or
+krisv krisv
+
+=====================
+Menu
+	Design
+		Projects
+		Dashboard
+	DevOps
+		Deployments
+		Execution Server
+	Manage
+		Process Definitions
+		Process Instances
+		Task Administration
+		Jobs
+		Excecution Erros
+	Track
+		Task List
+		Process & Tas Reports
+		Business Dashboard
+
+

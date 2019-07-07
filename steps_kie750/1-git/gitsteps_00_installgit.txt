@@ -1,0 +1,23 @@
+Git Is Installed As part CygWin 
+-----------------------------------------
+o Download Cygwin 
+https://cygwin.com/setup-x86_64.exe
+
+- Set up cygwin. I installed to C:\cygwin64
+
+
+Install Git
+---------------------------------
+o Run setup cgywinsetup64.exe
+
+o From Select Packages
+- View dropdown, select Category
+- Search for: git
+
+o See if git is installed
+- On command line enter:
+whereis git
+
+shoud see:
+git: /usr/bin/git.exe /usr/share/man/man1/git.1.gz
+

@@ -1,0 +1,38 @@
+Changing Wilfly Port - standalone-full.xml
+--------------------------------------------------
+/mnt/FBIN/jbpm-installer-full-7.5.0.Final/wildfly-10.1.0.Final/standalone/configuration
+
+standalone-full.xml
+------------------------------------------------
+Change in standalone-full.xml this entry:
+    <socket-binding-group name="standard-sockets" default-interface="public" port-offset="${jboss.socket.binding.port-offset:0}">
+		.
+		.
+        <socket-binding name="http" port="${jboss.http.port:9080}"/>
+
+
+build.xml
+--------------------------
+/mnt/FBIN/jbpm-installer-full-7.5.0.Final/
+
+Change build.xml
+Change  reference to 8080 to 9080
+Specifically:
+  .
+  <target name="start.jboss">
+	.
+      <arg value="-Dorg.kie.server.controller=http://localhost:9080/jbpm-console/rest/controller" />
+      <arg value="-Dorg.kie.server.location=http://localhost:9080/kie-server/services/rest/server" />
+	.
+	.
+    <exec executable="${jboss.full.path.linux}" spawn="yes" osfamily="unix">
+	.
+	.
+      <arg value="-Dorg.kie.server.controller=http://localhost:9080/jbpm-console/rest/controller" />
+      <arg value="-Dorg.kie.server.location=http://localhost:9080/kie-server/services/rest/server" />
+	
+
+	
+Restart Server And Access From New Port 9080
+--------------------------------------------------
+http://localhost:9080/jbpm-console/kie-wb.jsp

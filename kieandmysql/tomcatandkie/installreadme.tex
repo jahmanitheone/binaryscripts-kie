@@ -1,0 +1,54 @@
+Prerequisite
+----------------------------------------
+Tomcat 8.5
+JBPM and KIE 7.0.0
+
+
+Installation files directories
+----------------------------------------
+./lib - Libraries
+./config - config files
+
+Action after downloads
+----------------------------------------
+kie-wb-distribution-wars-7.0.0-20170228.182206-1287.jar rename to jbpm-console.war
+
+
+Copy all jars in ./lib to TOMCAT_HOME/lib
+----------------------------------------
+o kie and jbpm jars
+jboss-jacc-api_1.5_spec-1.0.0.Final.jar
+jbpm-console.war
+kie-tomcat-integration-7.0.0.Final.jar
+
+o bitronics jars
+btm-2.1.4.jar
+btm-config.properties
+btm-tomcat55-lifecycle-2.1.4.jar
+
+o Datasource and transactions jars
+h2-1.3.173.jar
+jta-1.1.jar
+mysql-connector-java-5.1.18.jar
+slf4j-api-1.7.7.jar
+slf4j-jdk14-1.7.7.jar
+
+
+Copy configuration files inside TOMCAT_HOME/conf
+---------------------------------------------------
+btm-config.properties
+resources.properties
+
+
+Modifify TOMCAT_HOME/conf content
+---------------------------------------------------
+server.xml
+tomcat-users.xml
+* Do no copy these files directly modifiy them in tomcat directory
+
+Change setenv.sh or setven.bat
+---------------------------------------------------
+
+Start tomcat
+---------------------------------------------------
+

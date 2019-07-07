@@ -1,0 +1,8 @@
+* These are a list of files, *.jaras have been deleted for git import
+
+ddl-scripts
+files
+files.txt
+jbpm-persistence-JPA2.xml
+mysql-connector-java-5.1.18.jar
+mysql_module.xml

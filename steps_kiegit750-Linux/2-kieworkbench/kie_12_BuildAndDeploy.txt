@@ -1,0 +1,48 @@
+Medical Income Projects
+---------------------------------------------------
+o There are two projects for medical income:
+hx-eligibility-dto
+hx-eligibility-workflows 
+
+The hx-eligibility-workflows is dependent on hx-eligibility-dto
+We should build hx-eligibility-dto first.
+
+
+Select hx-eligibility-dto Project
+-----------------------------------------
+Home->Design (icon)->Projects
+o Click project: hx-eligibility-dto
+- You will see the project assets
+o Build the Project
+o Click [Build & Deploy]
+- You should see a "Build Successful" green disappearing message
+- You should see a "Deploy to server template" green disappearing message
+
+
+Validate The Deployment Of The Project
+-------------------------------------------------
+Home->DevOps (icon)->Servers
+o See the project in KIE CONTAINERS
+- The project is deployed at the default server url:
+http://localhost:8080/kie-server/services/rest/server/containers/hx-eligibility-dto_1.0.2  
+ 
+
+Select hx-eligibility-workflows Project
+-----------------------------------------
+Home->Design (icon)->Projects
+o Click project: hx-eligibility-workflows
+- You will see the project assets
+o Build the Project
+o Click [Build & Deploy]
+- You should see a "Build Successful" green disappearing message
+- You should see a "Deploy to server template" green disappearing message
+
+
+Validate Dependencies To hx-eligibility-workflows Project
+----------------------------------------------------------
+Home->DevOps (icon)->Servers
+o See the project in KIE CONTAINERS
+- The project is deployed at the default server url:
+ http://localhost:8080/kie-server/services/rest/server/containers/hx-eligibility-workflows_1.0.2
+
+

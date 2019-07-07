@@ -1,0 +1,44 @@
+Start KIE Workbench
+-----------------------------
+./jstart
+
+o We should see this message:
+[org.kie.workbench.common.screens.datasource.management.backend.DataSourceManagementBootstrap] (pool-22-thread-1) Initialize deployments task finished successfully.
+
+
+jstart script
+-------------------
+#!/bin/sh
+
+./jstart_step1
+./jtaillog
+
+
+
+jstart_step1 script
+-------------------
+#!/bin/sh
+
+CMD="ant start.demo.noeclipse"
+echo .
+echo CMD=$CMD
+echo .
+
+$CMD
+
+
+
+jtaillog script
+-------------------
+#!/bin/sh
+
+CMD="tail -f ./wildfly-10.1.0.Final/standalone/log/server.log"
+echo CMD=$CMD
+
+$CMD
+
+
+View KIE Workbench
+--------------------------------------------------
+http://localhost:8080/jbpm-console/kie-wb.jsp
+

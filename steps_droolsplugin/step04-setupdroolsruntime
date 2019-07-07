@@ -1,0 +1,75 @@
+Linux Plugin Directory
+---------------------------------
+/run/media/pchauvet/easystore/DEV/DROOLSWORKSPACES/DROOLSLIB/DROOLS7/DROOLS72/droolsjbpm-tools-distribution-7.20.0.Final/binaries
+
+
+Install Drools Runtime
+-------------------------------------------
+Window->Preferences->Drools->Installed Drools Runtimes
+Add->Path->Browse
+
+Copy directory /run/media/pchauvet/easystore/DEV/DROOLSWORKSPACES/DROOLSLIB/DROOLS7/DROOLS72/droolsjbpm-tools-distribution-7.20.0.Final/binaries 
+to -> Path:
+
+All fields will be filled out:
+Name: Drools 7.20.0.201904020824
+Path: /run/media/pchauvet/easystore/DEV/DROOLSWORKSPACES/DROOLSLIB/DROOLS7/DROOLS72/droolsjbpm-tools-distribution-7.20.0.Final/binaries
+Version: 7.20.0.201904020824
+
+[OK]
+[Apply and Close]
+
+
+Open Runtime Perspective
+-------------------------------------------
+Window->Perspective->Open Perspective->Other
+Drools->Open
+
+
+Run Example Program
+https://docs.jboss.org/drools/release/7.20.0.Final/kie-api-javadoc/
+-------------------------------------------
+File->New->Other->Drools->Drools Project
+Next->Create a project->Next
+Project name: droolsexample02
+Build the project using: Maven
+- Eclipse will fill in-> Group ID:com.sample, Artifact Id:droolsexample02, Version:1.0.0-SNAPSHOT
+[Finish]
+
+- Select the code: DroolsTest.java
+- Run As -> Java Applications
+
+
+
+Run Example Program
+-------------------------------------------
+File->New->Other->Drools->Drools Project
+If you have internet access->Next->Select Online Example Repository
+Drools Playground at github (droolsjbpm-6.3)
+- There are 5 project
+Customer Relationships
+Employee Self Evaluation
+Purchases
+Human Resources
+Translations
+
+o Select -> Human Resources
+o I select Translations->Finish
+
+
+
+Run Example Program
+-------------------------------------------
+New->Drools Project
+If you have internet access->Next->Select Online Example Repository
+Drools Playground at github (droolsjbpm-6.3)
+- There are 5 project
+Customer Relationships
+Employee Self Evaluation
+Purchases
+Human Resources
+Translations
+
+
+
+

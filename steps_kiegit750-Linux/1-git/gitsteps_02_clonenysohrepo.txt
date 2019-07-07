@@ -1,0 +1,41 @@
+NYSOH Repository
+---------------------------------------------------------------
+o A copy of the latest Workflow GIT is located at:
+/mnt/FTEMP2/CSRA/A-GIT/GITSANDBOX_PROD/20171110v102
+
+
+o Create cloned git repo, you see a directory: 20171110v102
+In it:
+20171110v102/
+gitweb
+hx-eligibility-dto
+hx-eligibility-parent
+hx-eligibility-testbase
+hx-eligibility-workflows
+hx-eligibility-workflows-config
+hx-eligibility-workflows-rest
+hx-eligibility-workflows-resttest
+hx-eligibility-workflows-test
+pom.xml
+README.md
+readmes
+
+
+- View if git repo
+cd 20171110v102
+- See where are with git
+git status
+
+You should see:
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working tree clean
+
+- View .git directory.
+ls -a
+
+You should see a .git directory
+
+Annneeed, we are good with GIT and cloning our Workflow
+
+
