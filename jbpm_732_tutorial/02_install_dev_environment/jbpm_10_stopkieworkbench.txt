@@ -1,0 +1,36 @@
+Stop KIE Workbench using: jstop
+---------------------------------------------------------
+cd /mnt/FBIN/jbpm-installer-full-7.32.0.Final
+
+
+Stop Business Central Script
+File: jstop
+-------------------------------
+#!/bin/bash
+CMD="ant stop.demo"
+echo CMD=$CMD
+$CMD
+
+Permision as: chmod +x
+
+
+* Use Script:
+./jstop
+
+
+* We see
+CMD=ant stop.demo
+Buildfile: /run/media/pchauvet/FBIN/jbpm-installer-full-7.32.0.Final/build.xml
+start.h2.check:
+     [echo] Checking if h2 db should be started ...
+stop.h2:
+     [java] Shutting down TCP Server at tcp://localhost:9092
+stop.jboss:
+     [exec] {
+     [exec]     "outcome" => "success",
+     [exec]     "result" => undefined
+     [exec] }
+stop.demo:
+BUILD SUCCESSFUL
+Total time: 5 seconds
+

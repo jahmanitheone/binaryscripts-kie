@@ -1,0 +1,104 @@
+Site And Resources
+---------------------------------------------------------
+https://docs.jboss.org/jbpm/release/7.32.0.Final/jbpm-docs/html_single/
+http://downloads.jboss.org/jbpm/release/7.32.0.Final/jbpm-installer-full-7.32.0.Final.zip	
+
+
+jBPM tooling For Eclipse Plug-in
+-----------------------------------------------------
+https://download.jboss.org/drools/release/7.32.0.Final/
+https://download.jboss.org/drools/release/7.32.0.Final/droolsjbpm-tools-distribution-7.32.0.Final.zip
+Link for eclipse:
+https://downloads.jboss.org/jbpm/release/7.32.0.Final/updatesite/
+
+
+Download KIE jbpm-installer-full-7.32.0.Final.zip
+-----------------------------------------------------
+Unzip to /mnt/FBIN/jbpm-installer-full-7.32.0.Final
+
+
+Install KIE Artifacts Using j_install
+--------------------------------------------
+cd /mnt/FBIN/jbpm-installer-full-7.32.0.Final
+./j_install.sh
+
+o Here is j_install.sh script:
+#!/bin/sh
+
+CMD="ant install.demo.noeclipse"
+echo CMD=$CMD
+
+$CMD
+
+
+Create Script For JBPM_HOME
+File: setjbpmhome
+-----------------------------------------------
+#!/bin/sh
+JBPM_HOME=/mnt/FBIN/jbpm-installer-full-7.32.0.Final
+export JBPM_HOME
+echo .
+echo JBPM_HOME=$JBPM_HOME
+echo .
+
+Set to executable: 
+chmod +x setjbpmhome
+
+
+Create Script To Add Users
+File: setuser
+-----------------------------------------------
+#!/bin/sh
+. setjbpmhome
+
+CMD="$WILDFILY_HOME/bin/add-user.sh"
+CMD="$CMD --user-properties $WILDFILY_HOME/standalone/configuration/users.properties"
+CMD="$CMD --group-properties $WILDFILY_HOME/standalone/configuration/roles.properties"
+CMD="$CMD --realm ApplicationRealm admin admin --silent"
+
+echo $CMD
+
+$CMD
+
+
+Set to executable: 
+chmod +x setuser
+
+
+
+Add Default Users - use setuser
+-----------------------------------------------
+cd /mnt/FBIN/jbpm-installer-full-7.32.0.Final
+./setupuser
+
+* Note:
+Users are located in the file: /standalone/configuration/users.properties
+Roles are located in the file: /standalone/configuration/roles.properties
+
+
+
+Add User To Server: pchauvet / pchauvet 
+-----------------------------------------------
+Add to /standalone/configuration/users.properties:
+pchauvet=b4e735a9ba52554e9e6244886c79eabf
+
+Add to /standalone/configuration/roles.properties:
+pchauvet=kiemgmt,manager,Accounting,admin,HR,IT,sales,process-admin,rest-all,analyst,developer,kie-server,user
+
+
+
+Directory With All Scripts: jbpmscripts/
+-----------------------------------------------
+jeclipse
+jstarwitheclipse.sh
+jstop
+jstart
+jrestart
+jtaillog
+setjbpmhome
+setupuser
+
+Copy all these scripts to /mnt/FBIN/jbpm-installer-full-7.32.0.Final/
+
+
+

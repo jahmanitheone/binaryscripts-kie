@@ -1,0 +1,28 @@
+JBPM Business Central
+------------------------------------------------------------------
+https://start.jbpm.org/
+Build your business application in just a few seconds! 
+
+Business Application successfully generated!
+Unzip generated business-application.zip file
+Go to business-application-service directory
+Execute launch.sh/bat clean install
+Open browser at http://localhost:8090
+
+
+Download Business Cental 
+------------------------------------------------
+click [Generate default business application]
+business-application.zip
+
+
+
+Run Business Central
+------------------------------------------------
+cd /mnt/FBIN/business-application-732/business-application-service
+
+./launch.sh clean install
+
+Access site:
+http://localhost:8090
+

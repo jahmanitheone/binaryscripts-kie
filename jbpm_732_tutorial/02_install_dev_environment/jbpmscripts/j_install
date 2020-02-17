@@ -1,0 +1,7 @@
+#!/bin/sh
+
+CMD="ant install.demo"
+echo CMD=$CMD
+
+$CMD
+

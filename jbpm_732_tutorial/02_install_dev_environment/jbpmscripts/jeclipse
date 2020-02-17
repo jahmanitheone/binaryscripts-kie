@@ -1,0 +1,7 @@
+#!/bin/sh
+
+CMD="ant start.eclipse"
+echo CMD=$CMD
+
+$CMD
+

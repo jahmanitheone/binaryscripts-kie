@@ -1,0 +1,91 @@
+Install Eclipse
+--------------------------------------------------------------------------------
+
+Donwload eclipse 
+------------------------------------------
+https://tools.jboss.org/downloads/overview.html
+
+Install:
+eclipse-java-2019-12-R-linux-gtk-x86_64.tar.gz
+
+Install to:
+/mnt/FBIN/eclipse_drools_201912
+
+
+
+Install Drools and jbpm Tools
+------------------------------------------
+Download all zip from https://download.jboss.org/drools/release/7.32.0.Final/:
+
+business-central-7.32.0.Final-wildfly14.war
+drools-distribution-7.32.0.Final.zip
+droolsjbpm-integration-distribution-7.32.0.Final.zip
+droolsjbpm-tools-distribution-7.32.0.Final.zip
+kie-server-distribution-7.32.0.Final.zip
+
+
+1. Install the tools from: droolsjbpm-tools-distribution-7.32.0.Final.zip
+
+Unzip file and see these contents:
+binaries
+ReadMeDroolsJbpmTools.txt
+sources
+
+
+Copy binaries/ content to /mnt/FBIN/DROOLS_JBPM_7.32.0.Final
+
+
+Installing the plugins in Eclipse
+------------------------------------------
+Eclipse install location is:
+	/mnt/FBIN/eclipse_drools_201912
+Load eclipse with this workspace:
+	/mnt/FDEV/DROOLS732/workspacedrools732_02_setup
+
+Install plugin:
+	Help -> Install new software...
+	Click [Add]
+		Name: drools732
+		Location -> Select 'org.drools.updatesite' of all the downloads
+			Paste this information:
+				/mnt/FDOWNLOAD/JBPM_DROOLS_PAM_2019/DROOLS_7_32/droolstooling/droolsjbpm-tools-distribution-7.32.0.Final/binaries/org.drools.updatesite
+	Click [Add]
+
+	Available Software -> Select "Drools and jBPM"
+	[Next] -> [Next] -> [Next]
+	Click "I accept the terms of the license agreement"
+	[Finish]
+
+	Security Warning -> [Install anyway]
+	[Restart Now]
+
+3. See the installing development tooling:
+Window -> Preferences -> See these entries:
+Drools and jBPM entires
+
+
+
+Configure Drools Plugin
+------------------------------------------
+Window -> Preferences -> Drools -> Install Drools Runtime ->
+[Add] -> 
+	Path: paste  /mnt/FBIN/DROOLS_JBPM_7.32.0.Final
+	Name -> is filled as: Drools 7.32.0.202001250949
+	Version -> is filled as: 7.32.0.202001250949
+	[OK]
+[Apply and Close]
+
+
+
+Configure jBPM Plugin
+------------------------------------------
+Window -> Preferences -> Drools -> Install jBPM Runtime ->
+[Add] -> 
+	Path: paste  /mnt/FBIN/DROOLS_JBPM_7.32.0.Final
+	Name -> is filled as: jBPM 7.32.0.202001251046
+	Version -> is filled as: 7.32.0.202001251046
+	[OK]
+[Apply and Close]
+
+
+

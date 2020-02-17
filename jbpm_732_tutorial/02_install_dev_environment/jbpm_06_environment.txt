@@ -1,0 +1,30 @@
+H2 DB Installation
+---------------------------------------------------------------
+/home/pchauvet/
+
+jbpm-db.h2.db
+jbpm-db.lock.db
+
+hs_err_pid2411.log
+hs_err_pid2645.log
+hs_err_pid4385.log
+
+
+
+jBPM Links
+---------------------------------------------------------------
+Use user id: pchauvet / pchauvet
+http://localhost:8080/jbpm-casemgmt/jbpm-cm.html
+http://localhost:8080/jbpm-console/
+
+Use user id: krisv / krisv
+http://localhost:8080/jbpm-console/rest/controller
+http://localhost:8080/kie-server/services/rest/server
+
+
+
+
+
+
+
+

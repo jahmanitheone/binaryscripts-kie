@@ -1,0 +1,7 @@
+#!/bin/sh
+
+CMD="tail -f ./wildfly-10.1.0.Final/standalone/log/server.log"
+echo CMD=$CMD
+
+$CMD
+

@@ -1,0 +1,8 @@
+#!/bin/sh
+WILDFILY_HOME=/mnt/FBIN/jbpm-installer-full-7.32.0.Final/wildfly-14.0.1.Final/
+echo .
+echo WILDFILY_HOME=$WILDFILY_HOME
+echo .
+
+$WILDFILY_HOME/bin/add-user.sh --user-properties $WILDFILY_HOME/standalone/configuration/users.properties  --group-properties $WILDFILY_HOME/standalone/configuration/roles.properties  --realm ApplicationRealm admin admin --silent
+

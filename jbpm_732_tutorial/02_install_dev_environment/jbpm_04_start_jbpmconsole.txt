@@ -1,0 +1,111 @@
+JBPM Development Scripts
+--------------------------------------------------
+
+Start Business Central Script
+File: jstart
+-------------------------------
+#!/bin/sh
+. setjbpmhome
+CMD="ant start.demo.noeclipse"
+echo CMD=$CMD
+$CMD
+echo .
+echo Right click to start:
+echo .
+echo http://localhost:$WILDFLY_SERVER_PORT/jbpm-console/kie-wb.jsp
+echo .
+
+Permision as: chmod +x
+
+* Use Script:
+./jscript
+
+* We see:
+CMD=ant start.demo.noeclipse
+Buildfile: /run/media/pchauvet/FBIN/jbpm-installer-full-7.32.0.Final/build.xml
+start.h2.check:
+     [echo] Checking if h2 db should be started ...
+start.h2:
+start.jboss:
+start.demo.noeclipse:
+BUILD SUCCESSFUL
+Total time: 10 seconds
+
+
+View KIE Workbench
+--------------------------------------------------
+http://localhost:8080/jbpm-console/kie-wb.jsp
+Enter user: pchauvet / pchauvet
+
+
+
+Other Scripts
+-------------------------------------------------
+
+
+Stop Business Central Script
+File: jstop
+-------------------------------
+#!/bin/bash
+CMD="ant stop.demo"
+echo CMD=$CMD
+$CMD
+
+Permision as: chmod +x
+
+* Use Script:
+./jstop
+
+* We see
+CMD=ant stop.demo
+Buildfile: /run/media/pchauvet/FBIN/jbpm-installer-full-7.32.0.Final/build.xml
+start.h2.check:
+     [echo] Checking if h2 db should be started ...
+stop.h2:
+     [java] Shutting down TCP Server at tcp://localhost:9092
+stop.jboss:
+     [exec] {
+     [exec]     "outcome" => "success",
+     [exec]     "result" => undefined
+     [exec] }
+stop.demo:
+BUILD SUCCESSFUL
+Total time: 5 seconds
+
+
+
+See Server Log Script
+File: jtaillog 
+-------------------------------
+#!/bin/sh
+. setjbpmhome
+CMD="tail -f $WILDFILY_HOME/standalone/log/server.log"
+echo CMD=$CMD
+$CMD
+
+Permision as: chmod +x
+
+* Use Script:
+./jtaillog
+
+* We see:
+tail of server log
+
+
+Restart Server 
+File: jrestart
+-------------------------------
+#!/bin/sh
+. jstop
+. jstart
+
+Permision as: chmod +x
+
+* Use Script:
+./jrestart
+
+
+
+
+
+

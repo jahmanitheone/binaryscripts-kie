@@ -1,0 +1,6 @@
+#!/bin/sh
+
+CMD="ant start.demo.noeclipse"
+echo CMD=$CMD
+
+$CMD
