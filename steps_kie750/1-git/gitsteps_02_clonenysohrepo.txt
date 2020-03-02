@@ -1,13 +1,13 @@
-NYSOH Repository
+DEVENV Repository
 ---------------------------------------------------------------
 o Current Repository Location For Workflow
-ssh://nyxsvlalb015/opt/was/git/NYSOHRulesRepository/.git
+ssh://repository015/opt/was/git/DEVRulesRepository/.git
 
 - You have to get access from adminsitrator: Kalayan Venkata
 
 
-o My Sandbos Workfow On NYSOH
-http://nyxsvlalb344/pchauvet/csra-work-flow-test.git
+o My Sandbos Workfow On DEVENV
+http://nyxsvlalb344/pchauvet/work-flow-test.git
 
 
 Create Your GIT Sandox
@@ -18,30 +18,30 @@ C:\A-GIT\GITSANDBOX_TEMP\20180119a
 
 Clone Workflow To Local Sandbox
 ----------------------------------------------------------------
-git clone ssh://nyxsvlalb015/opt/was/git/NYSOHRulesRepository/.git
+git clone ssh://repository015/opt/was/git/DEVRulesRepository/.git
 - Provide your local computer password
 
 If you dont' have access to real Workflow, you can play around with my workspace
-git clone http://nyxsvlalb344/pchauvet/csra-work-flow-test.git
+git clone http://nyxsvlalb344/pchauvet/work-flow-test.git
 - Provide you local computer user id and password
 
-o Create cloned git repo, you see a directory: csra-work-flow-test
+o Create cloned git repo, you see a directory: work-flow-test
 In it:
-csra-work-flow-test/
+work-flow-test/
 README.md
 hooks
-hx-eligibility-dto
-hx-eligibility-parent
-hx-eligibility-readmes
-hx-eligibility-testbase
-hx-eligibility-workflows
-hx-eligibility-workflows-rest
-hx-eligibility-workflows-resttest
-hx-eligibility-workflows-test
+aiki-eligibility-dto
+aiki-eligibility-parent
+aiki-eligibility-readmes
+aiki-eligibility-testbase
+aiki-eligibility-workflows
+aiki-eligibility-workflows-rest
+aiki-eligibility-workflows-resttest
+aiki-eligibility-workflows-test
 pom.xml
 
 - View if git repo
-cd csra-work-flow-test
+cd work-flow-test
 - See where are with git
 git status
 

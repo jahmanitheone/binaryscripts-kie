@@ -10,7 +10,7 @@ Window->Perspective->Open Perspective->Git
 Clone a Git Repository
 
 Past this in the URI:
-ssh://kvenkat1@nyxsvlalb015/opt/was/git/NYSOHRulesRepository
+ssh://user@repository015/opt/was/git/DEVENVRulesRepository
 Password: Sep@2017
 
 Next->Deselect All->Select master only
@@ -25,12 +25,12 @@ Finish
 
 Import Projects Into Eclipse
 ----------------------------------------------
-Select 20170911->Working Tree->EligibilityProjects
+Select 20170911->Working Tree->JbpmProjects02
 Select these four projects:
-hx-eligibility-dto
-hx-eligibility-dto-test
-hx-eligibility-workflows
-hx-eligibility-workflows-test
+aiki-eligibility-dto
+aiki-eligibility-dto-test
+aiki-eligibility-workflows
+aiki-eligibility-workflows-test
 
 Right-Click->Import
 
@@ -38,21 +38,21 @@ Right-Click->Import
 Switch to Java Perspective to View Project
 ----------------------------------------------
 Done!
-Project is ready for eclipse development
+Project is ready for eclipse DEVENVelopment
 
 
 Importing Project To KIE 
 ---------------------------------
 From windows command line:
-cd C:\GITSANDBOX_TEMP\20170911\EligibilityProjects
+cd C:\GITSANDBOX_TEMP\20170911\JbpmProjects02
 
 
 
 Creating Branch In Eclipse
 ----------------------------------------
 1. Clone current git in eclipse
-ssh://kvenkat1@nyxsvlalb015/opt/was/git/NYSOHRulesRepository
-kvenkat1
+ssh://pchauvet@repository015/opt/was/git/DEVENVRulesRepository
+pchauvet
 Sep@2017
 
 2. Create branch in eclise
@@ -69,7 +69,7 @@ Double Click this branch->"Do you really want to checkout this branch"->Ok
 - Note this branch is now the working branch (See check mark on branch)
 
 4. View Current branch on command line
-C:\A-DEV\workspace-csra-temp\20170802a
+C:\A-DEVENV\workspace-csra-temp\20170802a
 
 git log --graph --decorate --all --pretty=oneline
 * b7490512696299cea04e4e40c423b92fa13ec7f0 (HEAD -> executable_workflows_v1, origin/master, master) Init
@@ -77,9 +77,9 @@ git log --graph --decorate --all --pretty=oneline
 - Note head points to: executable_workflows_v1
 
 5. Add New code to branch
-o Copy code from C:\A-DEV\workspace-csrra-sandbox
-hx-eligibility-dto
-hx-eligibility-workflows
+o Copy code from C:\A-DEVENV\workspace-csrra-sandbox
+aiki-eligibility-dto
+aiki-eligibility-workflows
 
 o Commit changes
 git commit -a -m "Checking in barebone executable working branch"

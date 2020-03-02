@@ -39,7 +39,7 @@ Select the following:
 
 File->Import->Git->Projects from Git
 Existing local repository->Next
-Select csra-work-flow-test
+Select work-flow-test
 
 Import existing Eclipse projects
 - You will see: Working Tree

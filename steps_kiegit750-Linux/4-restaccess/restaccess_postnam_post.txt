@@ -34,7 +34,7 @@ o Stale
 {
 	"memberFacts": 
 	{
-		"com.csra.eligibility.domain.entity.member.MemberFacts": {
+		"com.aikiinc.eligibility.domain.entity.member.MemberFacts": {
 			"stale": "true",
 			"houseHoldIncome": "55000",
 			"age": "55"
@@ -49,7 +49,7 @@ o Not Request Financial Assistance
 {
 	"memberFacts": 
 	{
-		"com.csra.eligibility.domain.entity.member.MemberFacts": {
+		"com.aikiinc.eligibility.domain.entity.member.MemberFacts": {
 			"houseHoldIncome": "55000",
 			"age": "55"
 		}
@@ -60,7 +60,7 @@ o Eligible
 {
 	"memberFacts": 
 	{
-		"com.csra.eligibility.domain.entity.member.MemberFacts": {
+		"com.aikiinc.eligibility.domain.entity.member.MemberFacts": {
 			"houseHoldIncome":"15000",
 			"age":"18",
 			"lif":" 25000",
@@ -79,7 +79,7 @@ o Pending
 {
 	"memberFacts": 
 	{
-		"com.csra.eligibility.domain.entity.member.MemberFacts": {
+		"com.aikiinc.eligibility.domain.entity.member.MemberFacts": {
 			"houseHoldIncome":"15000",
 			"age":"18",
 			"lif":" 25000",
@@ -97,7 +97,7 @@ o Ineligible
 {
 	"memberFacts": 
 	{
-		"com.csra.eligibility.domain.entity.member.MemberFacts": {
+		"com.aikiinc.eligibility.domain.entity.member.MemberFacts": {
 			"houseHoldIncome":"15000",
 			"age":"18",
 			"lif":" 25000",

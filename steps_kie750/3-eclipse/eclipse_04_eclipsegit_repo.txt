@@ -1,10 +1,10 @@
 GIT Repository URL
 ---------------------------------
 - The repository is located at:
-C:\A-GIT\SANDBOX_TEMP\20180119a\csra-work-flow-test
+C:\A-GIT\SANDBOX_TEMP\20180119a\work-flow-test
 
 - You will need to create the project GIT Repository in Kie Workbench using:
-file:///C:/A-GIT/SANDBOX_TEMP/20180119a/csra-work-flow-test/.git
+file:///C:/A-GIT/SANDBOX_TEMP/20180119a/work-flow-test/.git
 
 
 
@@ -24,7 +24,7 @@ o Go to Git Perspective
 Window->Perspective->Open Perspective->Other->Git
 
 o Select Add an Existing Local Git Repository
-Directory: C:\A-GIT\SANDBOX_TEMP\20180119a\csra-work-flow-test\.git
+Directory: C:\A-GIT\SANDBOX_TEMP\20180119a\work-flow-test\.git
 [Finish]
 
 You shoud see Git Repositories
@@ -39,7 +39,7 @@ Select the following:
 
 File->Import->Git->Projects from Git
 Existing local repository->Next
-Select csra-work-flow-test
+Select work-flow-test
 
 Import existing Eclipse projects
 - You will see: Working Tree

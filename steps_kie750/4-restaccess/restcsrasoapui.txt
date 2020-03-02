@@ -4,7 +4,7 @@ Accessing eligibility services using the SoapUi Tool
 Create Project In SOAPUI
 ==============================================
 o File -> New Rest Project
-Enter URL: http://localhost:9080/kie-server/services/rest/server/containers/hx-eligibility-workflows_1.0.2/
+Enter URL: http://localhost:9080/kie-server/services/rest/server/containers/aiki-eligibility-workflows_1.0.2/
 Ok
 
 o Config Request Param: 
@@ -22,7 +22,7 @@ Content-Type: application/json
 ==============================================
 See OPTIONS
 ==============================================
-http://localhost:9080/kie-server/services/rest/server/containers/hx-eligibility-workflows_1.0.2
+http://localhost:9080/kie-server/services/rest/server/containers/aiki-eligibility-workflows_1.0.2
 METHOD: OPTIONS
 HEAD, DELETE, GET, OPTIONS, PUT
 
@@ -30,22 +30,22 @@ HEAD, DELETE, GET, OPTIONS, PUT
 ==============================================
 Get Containers
 ==============================================
-http://localhost:9080/kie-server/services/rest/server/containers/hx-eligibility-workflows_1.0.2
+http://localhost:9080/kie-server/services/rest/server/containers/aiki-eligibility-workflows_1.0.2
 METHOD: GET
 Response:
 {
 "type": "SUCCESS",
-"msg": "Info for container hx-eligibility-workflows_1.0.2",
+"msg": "Info for container aiki-eligibility-workflows_1.0.2",
 "result": {"kie-container":    {
-  "container-id": "hx-eligibility-workflows_1.0.2",
+  "container-id": "aiki-eligibility-workflows_1.0.2",
   "release-id":       {
-	 "group-id": "com.csra.eligibility",
-	 "artifact-id": "hx-eligibility-workflows",
+	 "group-id": "com.aikiinc.eligibility",
+	 "artifact-id": "aiki-eligibility-workflows",
 	 "version": "1.0.2"
   },
   "resolved-release-id":       {
-	 "group-id": "com.csra.eligibility",
-	 "artifact-id": "hx-eligibility-workflows",
+	 "group-id": "com.aikiinc.eligibility",
+	 "artifact-id": "aiki-eligibility-workflows",
 	 "version": "1.0.2"
   },
   "status": "STARTED",
@@ -57,9 +57,9 @@ Response:
   "messages": [      {
 	 "severity": "INFO",
 	 "timestamp": 1507049118650,
-	 "content": ["Container hx-eligibility-workflows_1.0.2 successfully created with module com.csra.eligibility:hx-eligibility-workflows:1.0.2."]
+	 "content": ["Container aiki-eligibility-workflows_1.0.2 successfully created with module com.aikiinc.eligibility:aiki-eligibility-workflows:1.0.2."]
   }],
-  "container-alias": "hx-eligibility-workflows"
+  "container-alias": "aiki-eligibility-workflows"
 }}
 }	
 
@@ -67,8 +67,8 @@ Response:
 ==============================================
 Get Processes
 ==============================================
-http://localhost:9080/kie-server/services/rest/server/containers/hx-eligibility-workflows_1.0.2/processes
-/kie-server/services/rest/server/containers/hx-eligibility-workflows_1.0.2/processes
+http://localhost:9080/kie-server/services/rest/server/containers/aiki-eligibility-workflows_1.0.2/processes
+/kie-server/services/rest/server/containers/aiki-eligibility-workflows_1.0.2/processes
 {"processes": [
   {
   "associatedEntities": null,
@@ -78,8 +78,8 @@ http://localhost:9080/kie-server/services/rest/server/containers/hx-eligibility-
   "process-id": "MI_AidCategory",
   "process-name": "MI_AidCategory",
   "process-version": "1.0",
-  "package": "com.csra.eligibility.workflow.medicalincome",
-  "container-id": "hx-eligibility-workflows_1.0.2",
+  "package": "com.aikiinc.eligibility.workflow.medicalincome",
+  "container-id": "aiki-eligibility-workflows_1.0.2",
   "dynamic": false
 },
   {
@@ -90,8 +90,8 @@ http://localhost:9080/kie-server/services/rest/server/containers/hx-eligibility-
   "process-id": "MI_CoverageCode",
   "process-name": "MI_CoverageCode",
   "process-version": "1.0",
-  "package": "com.csra.eligibility.workflow.medicalincome",
-  "container-id": "hx-eligibility-workflows_1.0.2",
+  "package": "com.aikiinc.eligibility.workflow.medicalincome",
+  "container-id": "aiki-eligibility-workflows_1.0.2",
   "dynamic": false
 },
   {
@@ -102,8 +102,8 @@ http://localhost:9080/kie-server/services/rest/server/containers/hx-eligibility-
   "process-id": "MI_FPL_Level_Determination",
   "process-name": "MI_FPL_Level_Determination",
   "process-version": "1.0",
-  "package": "com.csra.eligibility.workflow.medicalincome",
-  "container-id": "hx-eligibility-workflows_1.0.2",
+  "package": "com.aikiinc.eligibility.workflow.medicalincome",
+  "container-id": "aiki-eligibility-workflows_1.0.2",
   "dynamic": false
 },
   {
@@ -114,8 +114,8 @@ http://localhost:9080/kie-server/services/rest/server/containers/hx-eligibility-
   "process-id": "MI_Incometype_Determination",
   "process-name": "MI_Incometype_Determination",
   "process-version": "1.0",
-  "package": "com.csra.eligibility.workflow.medicalincome",
-  "container-id": "hx-eligibility-workflows_1.0.2",
+  "package": "com.aikiinc.eligibility.workflow.medicalincome",
+  "container-id": "aiki-eligibility-workflows_1.0.2",
   "dynamic": false
 },
   {
@@ -126,8 +126,8 @@ http://localhost:9080/kie-server/services/rest/server/containers/hx-eligibility-
   "process-id": "MI_Ineligible_Prechecks",
   "process-name": "MI_Ineligible_Prechecks",
   "process-version": "1.0",
-  "package": "com.csra.eligibility.workflow.medicalincome",
-  "container-id": "hx-eligibility-workflows_1.0.2",
+  "package": "com.aikiinc.eligibility.workflow.medicalincome",
+  "container-id": "aiki-eligibility-workflows_1.0.2",
   "dynamic": false
 },
   {
@@ -138,8 +138,8 @@ http://localhost:9080/kie-server/services/rest/server/containers/hx-eligibility-
   "process-id": "MI_Main",
   "process-name": "MI_Main",
   "process-version": "1.0",
-  "package": "com.csra.eligibility.process.medicaidincome",
-  "container-id": "hx-eligibility-workflows_1.0.2",
+  "package": "com.aikiinc.eligibility.process.medicaidincome",
+  "container-id": "aiki-eligibility-workflows_1.0.2",
   "dynamic": false
 },
   {
@@ -150,8 +150,8 @@ http://localhost:9080/kie-server/services/rest/server/containers/hx-eligibility-
   "process-id": "MI_Renewals",
   "process-name": "MI_Renewals",
   "process-version": "1.0",
-  "package": "com.csra.eligibility.workflow.medicalincome",
-  "container-id": "hx-eligibility-workflows_1.0.2",
+  "package": "com.aikiinc.eligibility.workflow.medicalincome",
+  "container-id": "aiki-eligibility-workflows_1.0.2",
   "dynamic": false
 },
   {
@@ -162,8 +162,8 @@ http://localhost:9080/kie-server/services/rest/server/containers/hx-eligibility-
   "process-id": "MI_Resonable_Compatibility",
   "process-name": "MI_Resonable_Compatibility",
   "process-version": "1.0",
-  "package": "com.csra.eligibility.workflow.medicalincome",
-  "container-id": "hx-eligibility-workflows_1.0.2",
+  "package": "com.aikiinc.eligibility.workflow.medicalincome",
+  "container-id": "aiki-eligibility-workflows_1.0.2",
   "dynamic": false
 }
 ]}
@@ -172,16 +172,16 @@ http://localhost:9080/kie-server/services/rest/server/containers/hx-eligibility-
 ==============================================
 Get A Processes - MI_Main
 ==============================================
-http://localhost:9080/kie-server/services/rest/server/containers/hx-eligibility-workflows_1.0.2/processes/definitions/MI_Main/
+http://localhost:9080/kie-server/services/rest/server/containers/aiki-eligibility-workflows_1.0.2/processes/definitions/MI_Main/
 
 {
 "associatedEntities": {},
 "serviceTasks": {},
 "processVariables":    {
   "reasons": "String",
-  "eligibilityResult": "com.csra.eligibility.domain.eligibility.EligibilityResult",
-  "WFUtil": "com.csra.eligibility.workflow.util.WorkFlowUtil",
-  "memberFacts": "com.csra.eligibility.domain.entity.member.MemberFacts",
+  "eligibilityResult": "com.aikiinc.eligibility.domain.eligibility.EligibilityResult",
+  "WFUtil": "com.aikiinc.eligibility.workflow.util.WorkFlowUtil",
+  "memberFacts": "com.aikiinc.eligibility.domain.entity.member.MemberFacts",
   "indicators": "String"
 },
 "reusableSubProcesses":    [
@@ -195,8 +195,8 @@ http://localhost:9080/kie-server/services/rest/server/containers/hx-eligibility-
 "process-id": "MI_Main",
 "process-name": "MI_Main",
 "process-version": "1.0",
-"package": "com.csra.eligibility.process.medicaidincome",
-"container-id": "hx-eligibility-workflows_1.0.2",
+"package": "com.aikiinc.eligibility.process.medicaidincome",
+"container-id": "aiki-eligibility-workflows_1.0.2",
 "dynamic": false
 }
 
@@ -204,24 +204,24 @@ http://localhost:9080/kie-server/services/rest/server/containers/hx-eligibility-
 ==============================================
 Get A Processes - MI_Main - variables
 ==============================================
-http://localhost:9080/kie-server/services/rest/server/containers/hx-eligibility-workflows_1.0.2/processes/definitions/MI_Main/variables
-/kie-server/services/rest/server/containers/hx-eligibility-workflows_1.0.2/processes/definitions/MI_Main/variables
+http://localhost:9080/kie-server/services/rest/server/containers/aiki-eligibility-workflows_1.0.2/processes/definitions/MI_Main/variables
+/kie-server/services/rest/server/containers/aiki-eligibility-workflows_1.0.2/processes/definitions/MI_Main/variables
 
 
-/kie-server/services/rest/server/containers/hx-eligibility-workflows_1.0.2/processes/definitions/MI_Main/variables
+/kie-server/services/rest/server/containers/aiki-eligibility-workflows_1.0.2/processes/definitions/MI_Main/variables
 {"variables": {
 "reasons": "String",
-"eligibilityResult": "com.csra.eligibility.domain.eligibility.EligibilityResult",
-"WFUtil": "com.csra.eligibility.workflow.util.WorkFlowUtil",
-"memberFacts": "com.csra.eligibility.domain.entity.member.MemberFacts",
+"eligibilityResult": "com.aikiinc.eligibility.domain.eligibility.EligibilityResult",
+"WFUtil": "com.aikiinc.eligibility.workflow.util.WorkFlowUtil",
+"memberFacts": "com.aikiinc.eligibility.domain.entity.member.MemberFacts",
 "indicators": "String"
 }}
 
 ==============================================
 Get A Processes - MI_Main - subprocesses/
 ==============================================
-http://localhost:9080/kie-server/services/rest/server/containers/hx-eligibility-workflows_1.0.2/processes/definitions/MI_Main/subprocesses/
-/kie-server/services/rest/server/containers/hx-eligibility-workflows_1.0.2/processes/definitions/MI_Main/subprocesses/
+http://localhost:9080/kie-server/services/rest/server/containers/aiki-eligibility-workflows_1.0.2/processes/definitions/MI_Main/subprocesses/
+/kie-server/services/rest/server/containers/aiki-eligibility-workflows_1.0.2/processes/definitions/MI_Main/subprocesses/
 
 {"subProcesses": [
 "MI_Ineligible_Prechecks",
@@ -237,7 +237,7 @@ Start Task: MI_Main
 ==============================================
 Authorization: Basic, use your KIE server user id/password. Mine is pchauvet/pchauvet
 METHOD: POST
-Url: http://localhost:9080/kie-server/services/rest/server/containers/hx-eligibility-workflows_1.0.2/processes/MI_Main/instances/
+Url: http://localhost:9080/kie-server/services/rest/server/containers/aiki-eligibility-workflows_1.0.2/processes/MI_Main/instances/
 Reqiest Headers: 
 	Content-Type: application/json
 Body: 
@@ -249,7 +249,7 @@ Body:
 {
 	"memberFacts": 
 	{
-		"com.csra.eligibility.domain.entity.member.MemberFacts": {
+		"com.aikiinc.eligibility.domain.entity.member.MemberFacts": {
 			"stale": "true",
 			"houseHoldIncome": "55000",
 			"age": "55"
@@ -260,7 +260,7 @@ Body:
 {
 	"memberFacts":
 	{
-		"com.csra.eligibility.domain.entity.member.MemberFacts":
+		"com.aikiinc.eligibility.domain.entity.member.MemberFacts":
         {
 			"stale":true,"requestingFinanceHelp":false,"newbornNoShow":false,"renewalPeriodPast":false,
 			"epAptcClockExpired":false,"fpl":0.0,"maFplLevelforThisMember":0.0,"irsFPL":0.0,"lif":0.0,
@@ -296,7 +296,7 @@ Body:
 	{
 		"memberFacts": 
 		{
-			"com.csra.eligibility.domain.entity.member.MemberFacts": {
+			"com.aikiinc.eligibility.domain.entity.member.MemberFacts": {
 				"houseHoldIncome": "55000",
 				"age": "55"
 			}
@@ -315,7 +315,7 @@ Body:
 	{
 		"memberFacts": 
 		{
-			"com.csra.eligibility.domain.entity.member.MemberFacts": {
+			"com.aikiinc.eligibility.domain.entity.member.MemberFacts": {
 				"houseHoldIncome":"15000",
 				"age":"18",
 				"lif":" 25000",
@@ -341,7 +341,7 @@ Body:
 	{
 		"memberFacts": 
 		{
-			"com.csra.eligibility.domain.entity.member.MemberFacts": {
+			"com.aikiinc.eligibility.domain.entity.member.MemberFacts": {
 				"houseHoldIncome":"15000",
 				"age":"18",
 				"lif":" 25000",
@@ -366,7 +366,7 @@ Body:
 {
 	"memberFacts": 
 	{
-		"com.csra.eligibility.domain.entity.member.MemberFacts": {
+		"com.aikiinc.eligibility.domain.entity.member.MemberFacts": {
 			"houseHoldIncome":"15000",
 			"age":"18",
 			"lif":" 25000",
@@ -402,7 +402,7 @@ http://localhost:9080/kie-server/services/rest/server/queries/processes/instance
    "process-name": "MI_Main",
    "process-version": "1.0",
    "process-instance-state": 2,
-   "container-id": "hx-eligibility-workflows_1.0.2",
+   "container-id": "aiki-eligibility-workflows_1.0.2",
    "initiator": "pchauvet",
    "start-date": 1507052350715,
    "process-instance-desc": "MI_Main",
@@ -416,14 +416,14 @@ http://localhost:9080/kie-server/services/rest/server/queries/processes/instance
 ==============================================
 Instance Variables
 ==============================================
-Url: http://localhost:9080/kie-server/services/rest/server/containers/hx-eligibility-workflows_1.0.2/processes/instances/444/
+Url: http://localhost:9080/kie-server/services/rest/server/containers/aiki-eligibility-workflows_1.0.2/processes/instances/444/
 {
    "process-instance-id": 444,
    "process-id": "MI_Main",
    "process-name": "MI_Main",
    "process-version": "1.0",
    "process-instance-state": 2,
-   "container-id": "hx-eligibility-workflows_1.0.2",
+   "container-id": "aiki-eligibility-workflows_1.0.2",
    "initiator": "pchauvet",
    "start-date": 1507052350715,
    "process-instance-desc": "MI_Main",

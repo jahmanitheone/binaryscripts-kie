@@ -1,15 +1,15 @@
 My Local Latest DevRepo
 ---------------------------------
-See 1-git/gitsteps_02_clonenysohrepo.txt
-- Shows how to clone git from NYSOH repository
+See 1-git/gitsteps_02_cloneDEVENVrepo.txt
+- Shows how to clone git from DEVENV repository
 
 - The repository is located at:
-C:\A-GIT\SANDBOX_TEMP\20180119a\csra-work-flow-test
+C:\A-GIT\SANDBOX_TEMP\20180119a\work-flow-test
 
 
 GIT Repository URL
 ---------------------------------
-file:///C:/A-GIT/SANDBOX_TEMP/20180119a/csra-work-flow-test/.git
+file:///C:/A-GIT/SANDBOX_TEMP/20180119a/work-flow-test/.git
 
 - You will need to create the project GIT Repository in Kie Workbench
 
@@ -18,16 +18,16 @@ Clone Git Repository In Kie Workbench
 ---------------------------------------------
 Home->Design (icon)->Projects
 Import Project->Repository URL:
-file:///C:/A-GIT/SANDBOX_TEMP/20180119a/csra-work-flow-test/.git
+file:///C:/A-GIT/SANDBOX_TEMP/20180119a/work-flow-test/.git
 
 o Select projects:
-hx-eligibility-dto
-hx-eligibility-workflows
+aiki-eligibility-dto
+aiki-eligibility-workflows
 [Ok]
 
 o The project will load and show how many objects it loaded
-hx-eligibility-dto - 9 entities
-hx-eligibility-workflows - 25 entities
+aiki-eligibility-dto - 9 entities
+aiki-eligibility-workflows - 25 entities
 
 
 
@@ -53,7 +53,7 @@ Home->Deveops (gear icon)->deployments
 Providers Types->openshift 3.6->Add Providers
 Provider Type: OpenShift
 Provider Name: MedicalIncome
-Master Url:	file:///C:/A-GIT/SANDBOX_TEMP/20180119a/csra-work-flow-test/.git
+Master Url:	file:///C:/A-GIT/SANDBOX_TEMP/20180119a/work-flow-test/.git
 Username: pchauvet
 Password: pchauvet
 [Finish]
@@ -66,14 +66,14 @@ MedicalIncome
 	.settings
 	README.md
 	hooks
-	hx-eligibility-dto
-	hx-eligibility-parent
-	hx-eligibility-readmes
-	hx-eligibility-testbase
-	hx-eligibility-workflows-rest
-	hx-eligibility-workflows-resttest
-	hx-eligibility-workflows-test
-	hx-eligibility-workflows
+	aiki-eligibility-dto
+	aiki-eligibility-parent
+	aiki-eligibility-readmes
+	aiki-eligibility-testbase
+	aiki-eligibility-workflows-rest
+	aiki-eligibility-workflows-resttest
+	aiki-eligibility-workflows-test
+	aiki-eligibility-workflows
 	pom.xml
 
 	
@@ -91,11 +91,11 @@ git://localhost:9418/MedicalIncome
 xxxClone Git Repository In Kie Workbench
 ---------------------------------------------
 Admin->Libray (icon)->Library Preferences->Organization Units
-	Name: csra-workflow
+	Name: workflow
 	Owner: pchauvet
 	Group ID: com.csra.workflows
-	Alias (in singular):  csra-workflow
-	Alias (in plural): csra-workflow
+	Alias (in singular):  workflow
+	Alias (in plural): workflow
 Admin->Libray (icon)->Library Preferences->Repositories
-	Name: csra-workflow
+	Name: workflow
 	Scheme: git

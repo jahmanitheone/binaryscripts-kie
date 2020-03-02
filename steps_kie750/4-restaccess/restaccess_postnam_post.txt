@@ -6,7 +6,7 @@ Query Process ID: 7
 
 Create Task In PostMan
 Action: POST
-Url: http://localhost:9080/kie-server/services/rest/server/containers/hx-eligibility-workflows_1.0.2/processes/MI_Main/instances/
+Url: http://localhost:9080/kie-server/services/rest/server/containers/aiki-eligibility-workflows_1.0.2/processes/MI_Main/instances/
 Authorization: 
 	Basic, use your KIE server user id/password. 
 	Mine is pchauvet/pchauvet
@@ -23,7 +23,7 @@ o Stale
 {
 	"memberFacts": 
 	{
-		"com.csra.eligibility.domain.entity.member.MemberFacts": {
+		"com.aikiinc.eligibility.domain.entity.member.MemberFacts": {
 			"stale": "true",
 			"houseHoldIncome": "55000",
 			"age": "55"
@@ -38,7 +38,7 @@ o Not Request Financial Assistance
 {
 	"memberFacts": 
 	{
-		"com.csra.eligibility.domain.entity.member.MemberFacts": {
+		"com.aikiinc.eligibility.domain.entity.member.MemberFacts": {
 			"houseHoldIncome": "55000",
 			"age": "55"
 		}
@@ -49,7 +49,7 @@ o Eligible
 {
 	"memberFacts": 
 	{
-		"com.csra.eligibility.domain.entity.member.MemberFacts": {
+		"com.aikiinc.eligibility.domain.entity.member.MemberFacts": {
 			"houseHoldIncome":"15000",
 			"age":"18",
 			"lif":" 25000",
@@ -68,7 +68,7 @@ o Pending
 {
 	"memberFacts": 
 	{
-		"com.csra.eligibility.domain.entity.member.MemberFacts": {
+		"com.aikiinc.eligibility.domain.entity.member.MemberFacts": {
 			"houseHoldIncome":"15000",
 			"age":"18",
 			"lif":" 25000",
@@ -86,7 +86,7 @@ o Ineligible
 {
 	"memberFacts": 
 	{
-		"com.csra.eligibility.domain.entity.member.MemberFacts": {
+		"com.aikiinc.eligibility.domain.entity.member.MemberFacts": {
 			"houseHoldIncome":"15000",
 			"age":"18",
 			"lif":" 25000",

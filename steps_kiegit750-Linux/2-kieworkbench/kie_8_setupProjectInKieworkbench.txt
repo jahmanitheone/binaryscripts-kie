@@ -5,7 +5,7 @@ Select Libray (icons)
 
 Select Organizational Units
 
-Name: csra-workflow
+Name: workflow
 Owner: pchauvet
 Group ID: com.csra.workflows
 [Save]

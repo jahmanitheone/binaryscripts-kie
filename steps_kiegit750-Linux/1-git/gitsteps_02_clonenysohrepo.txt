@@ -1,4 +1,4 @@
-NYSOH Repository
+DEVENV Repository
 ---------------------------------------------------------------
 o A copy of the latest Workflow GIT is located at:
 /mnt/FTEMP2/CSRA/A-GIT/GITSANDBOX_PROD/20171110v102
@@ -8,14 +8,14 @@ o Create cloned git repo, you see a directory: 20171110v102
 In it:
 20171110v102/
 gitweb
-hx-eligibility-dto
-hx-eligibility-parent
-hx-eligibility-testbase
-hx-eligibility-workflows
-hx-eligibility-workflows-config
-hx-eligibility-workflows-rest
-hx-eligibility-workflows-resttest
-hx-eligibility-workflows-test
+aiki-eligibility-dto
+aiki-eligibility-parent
+aiki-eligibility-testbase
+aiki-eligibility-workflows
+aiki-eligibility-workflows-config
+aiki-eligibility-workflows-rest
+aiki-eligibility-workflows-resttest
+aiki-eligibility-workflows-test
 pom.xml
 README.md
 readmes

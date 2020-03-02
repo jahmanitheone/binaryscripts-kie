@@ -1,8 +1,8 @@
 Creating Git Branch In Eclipse
 ----------------------------------------
 1. Clone current git in eclipse
-ssh://kvenkat1@nyxsvlalb015/opt/was/git/NYSOHRulesRepository
-kvenkat1
+ssh://pchauvet@repository015/opt/was/git/DEVRulesRepository
+pchauvet
 Sep@2017
 
 2. Create branch in eclise
@@ -28,8 +28,8 @@ git log --graph --decorate --all --pretty=oneline
 
 5. Add New code to branch
 o Copy code from C:\A-DEV\workspace-csrra-sandbox
-hx-eligibility-dto
-hx-eligibility-workflows
+aiki-eligibility-dto
+aiki-eligibility-workflows
 
 o Commit changes
 git commit -a -m "Checking in barebone executable working branch"

@@ -10,7 +10,7 @@ Window->Perspective->Open Perspective->Git
 Clone a Git Repository
 
 Past this in the URI:
-ssh://kvenkat1@nyxsvlalb015/opt/was/git/NYSOHRulesRepository
+ssh://pchauvet@repository015/opt/was/git/DEVRulesRepository
 Password: Sep@2017
 Password: Nov@2017
 
@@ -26,17 +26,17 @@ Finish
 
 Import Projects Into Eclipse
 ----------------------------------------------
-Select 20170911->Working Tree->EligibilityProjects
+Select 20170911->Working Tree->JbpmProjects02
 Select these four projects:
-hx-eligibility-dto
-hx-eligibility-dto-test
-hx-eligibility-workflows
-hx-eligibility-workflows-test
+aiki-eligibility-dto
+aiki-eligibility-dto-test
+aiki-eligibility-workflows
+aiki-eligibility-workflows-test
 
 Right-Click->Import
 
 
-pchauvet2@nyxsvlalb015's password:
+pchauvet2@repository015's password:
 Access denied
 
 
@@ -49,14 +49,14 @@ Project is ready for eclipse development
 Importing Project To KIE 
 ---------------------------------
 From windows command line:
-cd C:\GITSANDBOX_TEMP\20170911\EligibilityProjects
+cd C:\GITSANDBOX_TEMP\20170911\JbpmProjects02
 
 
 Creating Branch In Eclipse
 ----------------------------------------
 1. Clone current git in eclipse
-ssh://kvenkat1@nyxsvlalb015/opt/was/git/NYSOHRulesRepository
-kvenkat1
+ssh://pchauvet@repository015/opt/was/git/DEVRulesRepository
+pchauvet
 Sep@2017
 
 2. Create branch in eclise
@@ -82,8 +82,8 @@ git log --graph --decorate --all --pretty=oneline
 
 5. Add New code to branch
 o Copy code from C:\A-DEV\workspace-csrra-sandbox
-hx-eligibility-dto
-hx-eligibility-workflows
+aiki-eligibility-dto
+aiki-eligibility-workflows
 
 o Commit changes
 git commit -a -m "Checking in barebone executable working branch"
